@@ -4,10 +4,11 @@ img {
 }
 
 body {
+    background-image: url("geometricPattern.png");
     margin-top: 60px;
-    background-color: #3b4d6b;
     text-align: center;
     font-family: "Trebuchet MS";
+    font-size: 14px;
     color: white;
 }
 
