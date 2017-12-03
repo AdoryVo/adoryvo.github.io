@@ -1,8 +1,36 @@
 img {
+    border-radius:50%;
     width:200px;
 }
 
 body {
+    background-color: #3b4d6b;
     text-align: center;
-    font-family: "Arial";
+    font-family: "Trebuchet MS";
+    color: white;
+}
+
+.topnav {
+    background-color: #162736;
+    overflow: hidden;
+    font-family: "Trebuchet MS";
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav .active {
+    background-color: #8aacad;
+    color: white;
 }
