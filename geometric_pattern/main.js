@@ -44,7 +44,7 @@ function draw() {
 
 function keyPressed() {
     if (keyCode === 15 || keyCode === 83) {
-        saveCanvas('geometricPattern', 'png');
+        saveCanvas('scales', 'png');
     }
     return false;
 }
