@@ -1,3 +1,13 @@
+body {
+    margin: 0;
+    background-image: url("images/scales.png");
+    margin-top: 60px;
+    text-align: center;
+    font-family: "Trebuchet MS";
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
 img {
     border-radius:50%;
     width:200px;
@@ -6,17 +16,27 @@ img {
 
 a {
     color: white;
+    text-decoration: none;
+    padding: 20px;
 }
 
-body {
-    margin: 0;
-    background-image: url("images/scales.png");
-    margin-top: 60px;
+a:hover {
+    text-decoration: none;
+    color: #7a9cba
+}
+
+#links {
+    width: 400px;
     text-align: center;
-    font-family: "Trebuchet MS";
-    font-size: 14px;
-    color: white;
-    text-shadow: 0 0 5px black;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 50px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+    text-decoration: none;
 }
 
 #profile {
@@ -30,6 +50,7 @@ body {
     top: 50%;
     left: 50%;
     box-shadow: 0 0 15px #0a1b2a;
+    font-size: 20px;
 }
 
 .topnav {
