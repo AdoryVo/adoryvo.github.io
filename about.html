@@ -1,27 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>About</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    
+
+<head>
+    <title>About</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+<body>
     <div class="topnav" id="myTopnav">
         <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
+        <div class="dropdown">
+            <button class="dropbtn" onclick="window.location.href = 'projects.html';" style="cursor:pointer;">Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+            <div class="dropdown-content">
+                <a href="projects/gpa_calculator.html">GPA Calculator</a>
+                <a href="projects/hangman.html">Hangman</a>
+                <a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a>
+                <a href="projects/pace_calculator.html">Pace Calculator</a>
+                <a href="projects/result_time_calculator.html">Result Time Calculator</a>
+            </div>
+        </div>
         <a class="active" href="about.html"><strong>About</strong></a>
     </div>
-    
-    <body>
-        <div id="links">
-            <a href="https://github.com/AdoryVo" class="fa fa-github" target="_blank"></a>
-            <a href="https://repl.it/@AdoryVo" target="_blank">repl.it</a>
-        </div>
-        
-        <div id="info">
-            <p>Website is still a work in progress. Created by Adory Vo</p>
-            <p>Contact: adoryvo@gmail.com</p>
-            <a href="geometric_pattern/index.html">Background image and website (inspired by a hackclub.com tutorial) created with HTML & JS.</a>
-        </div>
-    </body>
+
+    <div id="links">
+        <a href="https://github.com/AdoryVo" class="fa fa-github" target="_blank"></a>
+        <a href="https://repl.it/@AdoryVo" target="_blank">repl.it</a>
+    </div>
+
+    <div id="info">
+        <p>Website is still a work in progress. Created by Adory Vo</p>
+        <p>Contact: adoryvo@gmail.com</p>
+        <a href="geometric_pattern/index.html">Background image and website (inspired by a hackclub.com tutorial) created with HTML & JS.</a>
+    </div>
+</body>
+
 </html>

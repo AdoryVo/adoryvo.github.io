@@ -1,34 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Projects</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <a class ="active" href="projects.html"><strong>Projects</strong></a>
-        <a href="about.html">About</a>
+
+<head>
+    <title>Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+        <button class="dropbtn" onclick="window.location.href = 'projects.html';" style="cursor:pointer;background-color: #8aacad;">Projects
+                    <i class="fa fa-caret-down"></i>
+                </button>
+        <div class="dropdown-content">
+            <a href="projects/gpa_calculator.html">GPA Calculator</a>
+            <a href="projects/hangman.html">Hangman</a>
+            <a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a>
+            <a href="projects/pace_calculator.html">Pace Calculator</a>
+            <a href="projects/result_time_calculator.html">Result Time Calculator</a>
+        </div>
     </div>
-    
-    <body>
-        <h1>Projects</h1>
-        <p>To try the projects, click the run button then input responses into the console on the right.</p>
-        <hr>
-        <p>GPA Calculator</p>
-        <iframe height="400px" width="80%" src="https://repl.it/@AdoryVo/GPA-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        <hr>
-        <p>Tic-Tac-Toe</p>
-        <iframe height="400px" width="80%" src="https://repl.it/@AdoryVo/Tic-Tac-Toe?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        <hr>
-        <p>Hangman</p>
-        <iframe height="400px" width="80%" src="https://repl.it/@AdoryVo/Hangman?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        <hr>
-        <p>Total Run Time Calculator (for running)</p>
-        <iframe height="400px" width="80%" src="https://repl.it/@AdoryVo/Total-Run-Time-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        <hr>
-        <p>Average Pace Calculator (for running)</p>
-        <iframe height="400px" width="80%" src="https://repl.it/@AdoryVo/Average-Pace-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
-        <hr>
-    </body>
+    <a href="about.html">About</a>
+</div>
+
+<body>
+    <h1>Projects</h1>
+    <div style="text-align:left;">
+    <h2>&emsp;Python</h2>
+    <ul>
+        <li><a href="projects/gpa_calculator.html">GPA Calculator</a></li>
+        <li><a href="projects/hangman.html">Hangman</a></li>
+        <li><a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a></li>
+        <li><a href="projects/pace_calculator.html">Pace Calculator</a></li>
+        <li><a href="projects/result_time_calculator.html">Result Time Calculator</a></li>
+    </ul>
+    </div>
+</body>
+
 </html>
