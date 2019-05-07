@@ -3,6 +3,7 @@
 
 <head>
     <title>Projects - Pace Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css" />
 </head>
 
@@ -26,9 +27,37 @@
 
 <body>
     <h1>Average Pace Calculator</h1>
+    <h2>Language: JavaScript</h2>
+
+    <form id="frm1" action="/action_page.php" oninput="calculate()" style="text-align: left; margin-left: 35%; margin-right: 35%;">
+        Distance (mi): <input type="number" name="dist" value="3"><br>
+        <br><b>Time</b>
+        <br> Minutes: <input type="number" name="mins" value="21" min="0">
+        <br> Seconds: <input type="number" name="secs" value="00" min="0" max="59"><br>
+        <p style="color: lightblue;"><b>Average Pace: </b><span id="pace"></span></p>
+    </form>
+
     <h2>Language: Python</h2>
     <p>To try the project, click the run button then input responses into the console.</p>
     <iframe height="600px" width="80%" src="https://repl.it/@AdoryVo/Average-Pace-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <script>
+        function calculate() {
+            var form = document.getElementById("frm1");
+            var dist = form.elements["dist"].value;
+            var mins = form.elements["mins"].value;
+            var secs = parseInt(form.elements["secs"].value);
+
+            var pace = (mins * 60 + secs) / dist
+            var left = Math.floor(pace / 60);
+            var right = (pace % 60).toFixed(2);
+            if (right < 10) {
+                right = "0" + right;
+            }
+
+            document.getElementById("pace").innerHTML = left + ":" + right + " min/mile";
+        }
+    </script>
 </body>
 
 </html>
