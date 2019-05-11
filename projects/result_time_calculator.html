@@ -5,6 +5,18 @@
     <title>Projects - Result Time Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css" />
+
+    <style>
+        input {
+            width: 50px;
+        }
+
+        form {
+            text-align: left;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+    </style>
 </head>
 
 <div class="topnav" id="myTopnav">
@@ -27,9 +39,37 @@
 
 <body>
     <h1>Result Time Calculator</h1>
-    <h2>Language: Python</h2>
+    <h3>Calculate the total time elapsed for travelling at a given pace and distance.</h3>
+    <h2 id="js">Language: JavaScript</h2>
+    <form id="frm1" action="/action_page.php" oninput="calculate()">
+        Distance (mi): <input type="number" name="dist" value="3"><br>
+        <br><b>Pace (min/mi)</b>
+        <br> Minutes: <input type="number" name="mins" value="21" min="0">
+        <br> Seconds: <input type="number" name="secs" value="00" min="0" max="59"><br>
+        <p style="color: lightblue;"><b>Result Time: </b><span id="result"></span></p>
+    </form>
+
+    <h2 id="py">Language: Python</h2>
     <p>To try the project, click the run button then input responses into the console.</p>
     <iframe height="600px" width="80%" src="https://repl.it/@AdoryVo/Total-Run-Time-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <script>
+        function calculate() {
+            var form = document.getElementById("frm1");
+            var dist = form.elements["dist"].value;
+            var mins = form.elements["mins"].value;
+            var secs = parseInt(form.elements["secs"].value);
+
+            var total = (mins * 60 + secs) * dist;
+            var left = Math.floor(total / 60);
+            var right = total % 60;
+            if (right < 10) {
+                right = "0" + right;
+            }
+
+            document.getElementById("result").innerHTML = left + ":" + right + " min";
+        }
+    </script>
 </body>
 
 </html>

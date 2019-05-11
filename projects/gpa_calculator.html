@@ -5,6 +5,18 @@
     <title>Projects - GPA Calculator</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../styles.css" />
+    
+    <style>
+        input {
+            width: 50px;
+        }
+        
+        form {
+            text-align: left;
+            margin-left: 35%;
+            margin-right: 35%;
+        }
+    </style>
 </head>
 
 <div class="topnav" id="myTopnav">
@@ -19,7 +31,7 @@
             <a href="tic-tac-toe.html">Tic-Tac-Toe</a>
             <a href="pace_calculator.html">Pace Calculator</a>
             <a href="result_time_calculator.html">Result Time Calculator</a>
-            <a href="projects/lost_woods.html">Lost Woods Game</a>
+            <a href="lost_woods.html">Lost Woods Game</a>
         </div>
     </div>
     <a href="../about.html">About</a>
@@ -27,9 +39,55 @@
 
 <body>
     <h1>GPA Calculator</h1>
-    <h2>Language: Python</h2>
+    <h3>Calculate your weighted and non-weighted GPA.</h3>
+    <h2 id="js">Language: JavaScript</h2>
+    <form id="frm1" action="/action_page.php" oninput="calculate()">
+        Number of Weighted Classes: <input type="number" name="weighted" value="0" min="0">
+        <br> Number of Non-weighted Classes: <input type="number" name="non-weighted" value="0" min="0"><br>
+        <br><b>Grades</b>
+        <br> Number of A's: <input type="number" name="A's" value="0" min="0">
+        <br> Number of B's: <input type="number" name="B's" value="0" min="0">
+        <br> Number of C's: <input type="number" name="C's" value="0" min="0">
+        <br> Number of D's: <input type="number" name="D's" value="0" min="0">
+        <br> Number of F's: <input type="number" name="F's" value="0" min="0">
+        <br>
+        <p style="color: lightblue;">
+            <b>Weighted GPA: </b><span id="w_result"></span><br>
+            <b>Non-Weighted GPA: </b><span id="nw_result"></span>
+        </p>
+    </form>
+
+    <h2 id="py">Language: Python</h2>
     <p>To try the project, click the run button then input responses into the console.</p>
     <iframe height="600px" width="80%" src="https://repl.it/@AdoryVo/GPA-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+
+    <script>
+        function calculate() {
+            var form = document.getElementById("frm1");
+            var numWeighted = parseInt(form.elements["weighted"].value);
+            var numNonweighted = parseInt(form.elements["non-weighted"].value);
+            var classes = numWeighted + numNonweighted;
+            var grades = [];
+            var sum = 0.0;
+
+            var dict1 = { 4: "A's", 3: "B's", 2: "C's", 1: "D's", 0: "F's" };
+            var letter;
+            3
+            for (letter in dict1) {
+                var numOfGrade = form.elements[dict1[letter]].value;
+                grades.push(numOfGrade);
+                sum += numOfGrade * letter;
+            }
+
+            for (letter in dict1) {
+                var numOfGrade = form.elements[dict1[letter]].value;
+                form.elements[dict1[letter]].max = classes - grades[0] - grades[1] - grades[2] - grades[3] - grades[4] + numOfGrade;
+            }
+
+            document.getElementById("nw_result").innerHTML = (sum / classes).toFixed(2);
+            document.getElementById("w_result").innerHTML = ((sum + numWeighted) / classes).toFixed(2);
+        }
+    </script>
 </body>
 
 </html>
