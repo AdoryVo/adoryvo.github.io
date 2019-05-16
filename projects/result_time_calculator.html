@@ -13,8 +13,8 @@
 
         form {
             text-align: left;
-            margin-left: 35%;
-            margin-right: 35%;
+            margin-left: 30%;
+            margin-right: 30%;
         }
     </style>
 </head>
@@ -42,11 +42,15 @@
     <h3>Calculate the total time elapsed for travelling at a given pace and distance.</h3>
     <h2 id="js">Language: JavaScript</h2>
     <form id="frm1" action="/action_page.php" oninput="calculate()">
-        Distance (mi): <input type="number" name="dist" value="3"><br>
+        Distance (mi): <input type="number" name="dist" value="3" min="0"><br>
         <br><b>Pace (min/mi)</b>
-        <br> Minutes: <input type="number" name="mins" value="21" min="0">
+        <br> Minutes: <input type="number" name="mins" value="7" min="0">
         <br> Seconds: <input type="number" name="secs" value="00" min="0" max="59"><br>
-        <p style="color: lightblue;"><b>Result Time: </b><span id="result"></span></p>
+        
+        <p style="color: lightblue;">
+            <span id="dist">3</span> miles at <span id="mins">7</span>:<span id="secs">00</span> min/mi<br>
+            <b>Result Time: </b><span id="result">21:00 min</span>
+        </p>
     </form>
 
     <h2 id="py">Language: Python</h2>
@@ -66,7 +70,14 @@
             if (right < 10) {
                 right = "0" + right;
             }
-
+            
+            if (secs < 10) {
+                secs = "0" + secs;
+            }
+            
+            document.getElementById("dist").innerHTML = dist;
+            document.getElementById("mins").innerHTML = mins;
+            document.getElementById("secs").innerHTML = secs;
             document.getElementById("result").innerHTML = left + ":" + right + " min";
         }
     </script>

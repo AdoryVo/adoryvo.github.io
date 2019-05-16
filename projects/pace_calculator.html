@@ -43,11 +43,14 @@
     <h2 id="js">Language: JavaScript</h2>
 
     <form id="frm1" action="/action_page.php" oninput="calculate()">
-        Distance (mi): <input type="number" name="dist" value="3"><br>
-        <br><b>Time</b>
+        Distance (mi): <input type="number" name="dist" value="3" min="0"><br>
+        <br><b>Time</b> [<span id="mins">21</span>:<span id="secs">00</span> min]
         <br> Minutes: <input type="number" name="mins" value="21" min="0">
         <br> Seconds: <input type="number" name="secs" value="00" min="0" max="59"><br>
-        <p style="color: lightblue;"><b>Average Pace: </b><span id="pace"></span></p>
+        <p style="color: lightblue;">
+            <span id="dist">3</span> miles in <span id="mins">21</span>:<span id="secs">00</span> min<br>
+            <b>Average Pace: </b><span id="pace">7:00.00 min/mile</span>
+            </p>
     </form>
 
     <h2 id="py">Language: Python</h2>
@@ -67,7 +70,14 @@
             if (right < 10) {
                 right = "0" + right;
             }
-
+            
+            if (secs < 10) {
+                secs = "0" + secs;
+            }
+                
+            document.getElementById("dist").innerHTML = dist;
+            document.getElementById("mins").innerHTML = mins;
+            document.getElementById("secs").innerHTML = secs;
             document.getElementById("pace").innerHTML = left + ":" + right + " min/mile";
         }
     </script>
