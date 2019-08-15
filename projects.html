@@ -2,65 +2,132 @@
 <html>
 
 <head>
-    <title>Projects</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Created with HTML, CSS, & JS.">
+  <meta name="author" content="Adory Vo">
 
-    <style>
-        a {
-            padding-left: 0;
-        }
-    </style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="new.css">
+
+  <title>Projects</title>
 </head>
 
-<div class="topnav" id="myTopnav">
-    <a href="index.html">Home</a>
-    <div class="dropdown">
-        <button class="dropbtn" onclick="window.location.href = 'projects.html';" style="cursor:pointer;background-color: #8aacad;">Projects
-                    <i class="fa fa-caret-down"></i>
-                </button>
-        <div class="dropdown-content">
-            <a href="projects/gpa_calculator.html">GPA Calculator</a>
-            <a href="projects/hangman.html">Hangman</a>
-            <a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a>
-            <a href="projects/pace_calculator.html">Pace Calculator</a>
-            <a href="projects/result_time_calculator.html">Result Time Calculator</a>
-            <a href="projects/lost_woods.html">Lost Woods Game</a>
-        </div>
-    </div>
-    <a href="about.html">About</a>
-</div>
-
 <body>
-    <h1>Projects</h1>
-    <p>Click links below!</p>
-    <div style="text-align:left; line-height:20px;">
-        <h2>&emsp;Python</h2>
-        <ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navy bg-light">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="projects.html">Projects </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container text-white my-3 w-75">
+    <div class="card bg-navy bg-dark shadow-lg text-white">
+      <h5 class="card-header bg-dark-navy">Projects</h5>
+
+      <div class="card-body">
+        <p>
+          <button class="btn btn-primary text-warning" type="button" data-toggle="collapse" data-target="#python-card" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fab fa-python"></i>
+            Python
+          </button>
+        </p>
+        <div class="collapse mb-3" id="python-card">
+          <div class="list-group">
+            <a href="projects/gpa_calculator.html" class="list-group-item list-group-item-action">GPA Calculator</a>
+            <a href="projects/hangman.html" class="list-group-item list-group-item-action">Hangman</a>
+            <a href="projects/tic-tac-toe.html" class="list-group-item list-group-item-action">Tic-Tac-Toe</a>
+            <a href="projects/pace_calculator.html" class="list-group-item list-group-item-action">Pace Calculator</a>
+            <a href="projects/result_time_calculator.html" class="list-group-item list-group-item-action">Result Time Calculator</a>
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-light text-danger" type="button" data-toggle="collapse" data-target="#java-card" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fab fa-java"></i>
+            Java
+          </button>
+        </p>
+        <div class="collapse mb-3" id="java-card">
+          <div class="list-group">
+            <a href="projects/lost_woods.html" class="list-group-item list-group-item-action">Lost Woods Game</a>
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-warning text-dark" type="button" data-toggle="collapse" data-target="#js-card" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fab fa-js"></i>
+            Javascript
+          </button>
+        </p>
+        <div class="collapse mb-3" id="js-card">
+          <div class="list-group">
+            <a href="projects/gpa_calculator.html" class="list-group-item list-group-item-action">GPA Calculator</a>
+            <a href="projects/pace_calculator.html" class="list-group-item list-group-item-action">Pace Calculator</a>
+            <a href="projects/result_time_calculator.html" class="list-group-item list-group-item-action">Result Time Calculator</a>
+          </div>
+        </div>
+
+        <p>
+          <button class="btn btn-danger text-light" type="button" data-toggle="collapse" data-target="#mathematica-card" aria-expanded="false" aria-controls="collapseExample">
+            <i class="fas fa-divide"></i>
+            Mathematica
+          </button>
+        </p>
+        <div class="collapse mb-3" id="mathematica-card">
+          <div class="list-group">
+            <a href="projects/beach.html" class="list-group-item list-group-item-action">Graphics3D - Beach</a>
+          </div>
+        </div>
+
+        <!--
+        <div style="text-align:left; line-height:20px;">
+          <h2>&emsp;Python</h2>
+          <ul>
             <li><a href="projects/gpa_calculator.html#py">GPA Calculator</a></li>
             <li><a href="projects/hangman.html">Hangman</a></li>
             <li><a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a></li>
             <li><a href="projects/pace_calculator.html#py">Pace Calculator</a></li>
             <li><a href="projects/result_time_calculator.html#py">Result Time Calculator</a></li>
-        </ul>
+          </ul>
 
-        <h2>&emsp;JavaScript</h2>
-        <ul>
+          <h2>&emsp;JavaScript</h2>
+          <ul>
             <li><a href="projects/gpa_calculator.html#js">GPA Calculator</a></li>
             <li><a href="projects/pace_calculator.html#js">Pace Calculator</a></li>
             <li><a href="projects/result_time_calculator.html#js">Result Time Calculator</a></li>
-        </ul>
+          </ul>
 
-        <h2>&emsp;Java</h2>
-        <ul>
+          <h2>&emsp;Java</h2>
+          <ul>
             <li><a href="projects/lost_woods.html">Lost Woods Game</a></li>
-        </ul>
-        
-        <h2>&emsp;Mathematica</h2>
-        <ul>
+          </ul>
+
+          <h2>&emsp;Mathematica</h2>
+          <ul>
             <li><a href="projects/beach.html">Graphics3D - Beach</a></li>
-        </ul>
+          </ul>
+        </div>
+      -->
+      </div>
     </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,0 +1,31 @@
+@import url('https://use.fontawesome.com/releases/v5.10.1/css/all.css');
+
+body {
+  background-image: url("images/scales.png");
+}
+
+/* Custom Colors & Effects */
+.bg-navy {
+  background-color: #2a3b4a!important;
+}
+
+.bg-dark-navy {
+  background-color: #0e1f2e!important;
+}
+
+.border-navy {
+  border-color: #0e1f2e!important;
+  border-width: thick!important;
+}
+
+#shadow {
+  box-shadow: 0 0 10px black;
+}
+
+/* Home Page */
+#home-card {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}

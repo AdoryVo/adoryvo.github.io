@@ -2,63 +2,111 @@
 <html>
 
 <head>
-    <title>About</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css" />
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Created with HTML, CSS, & JS.">
+  <meta name="author" content="Adory Vo">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="new.css">
+
+  <title>About</title>
 </head>
 
 
 <body>
-    <div class="topnav" id="myTopnav">
-        <a href="index.html">Home</a>
-        <div class="dropdown">
-            <button class="dropbtn" onclick="window.location.href = 'projects.html';" style="cursor:pointer;">Projects
-                    <i class="fa fa-caret-down"></i>
-                </button>
-            <div class="dropdown-content">
-                <a href="projects/gpa_calculator.html">GPA Calculator</a>
-                <a href="projects/hangman.html">Hangman</a>
-                <a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a>
-                <a href="projects/pace_calculator.html">Pace Calculator</a>
-                <a href="projects/result_time_calculator.html">Result Time Calculator</a>
-                <a href="projects/lost_woods.html">Lost Woods Game</a>
-            </div>
-        </div>
-        <a class="active" href="about.html"><strong>About</strong></a>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navy bg-light">
+    <a class="navbar-brand" href="index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="projects.html">Projects </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
     </div>
+  </nav>
 
-    <div id="info">
-        <p style="margin-left: 20%; margin-right: 20%; text-align:left;">
-            Hey! I'm <b style="color: green">Adory</b>, an incoming freshman at <b style="color: navy">UC San Diego</b> and this website is kinda just a programming project of mine where I'll be uploading some of my finished projects.
-            <br/><br/> <b style="color: blue;">More about me!</b>
-            <ul style="text-align:left; margin-left:20%; line-height: 20px;">
-                <li>I play the piano and violin</li>
-                <li>I have a younger brother and sister</li>
-                <li>I run cross country and track & field</li>
-                <li>I ran the 2019 San Diego Half Marathon with a time of 1:37:39</li>
-                <li>I enjoy tutoring/teaching</li>
-                <li>Favorite color: navy blue</li>
-                <li>Favorite food: pasta (any kind!)</li>
-                <li>Favorite movies: Jason Bourne series, Forrest Gump, Arrival</li>
-                <li>Favorite TV Shows: Mr. Robot, Parks and Recreation, White Collar</li>
-                <li>Favorite video games: Pok&eacute;mon, Smash Bros, and League of Legends</li>
-                <li><i><a href="music.html">Click here to judge my music taste</a></i></li>
-            </ul>
+  <!--
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">Home</a>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="window.location.href = 'projects.html';" style="cursor:pointer;">Projects
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="projects/gpa_calculator.html">GPA Calculator</a>
+        <a href="projects/hangman.html">Hangman</a>
+        <a href="projects/tic-tac-toe.html">Tic-Tac-Toe</a>
+        <a href="projects/pace_calculator.html">Pace Calculator</a>
+        <a href="projects/result_time_calculator.html">Result Time Calculator</a>
+        <a href="projects/lost_woods.html">Lost Woods Game</a>
+      </div>
+    </div>
+    <a class="active" href="about.html"><strong>About</strong></a>
+  </div>
+-->
+
+  <!-- Body -->
+  <div class="container my-3 w-75">
+    <div class="card bg-navy bg-dark shadow-lg text-white">
+      <h5 class="card-header bg-dark-navy">About</h5>
+
+      <div class="card-body text-white">
+        <h6 class="card-title">Hey! I'm <b class="text-success">Adory</b>, an incoming freshman
+          at <b class="text-info">UC San Diego</b> and this website is kinda just a programming
+          project of mine where I'll be uploading some of my finished projects.</h6>
+
+        <p class="card-text">
+          <b class="text-primary">More about me!</b>
+          <ul>
+            <li>I play the piano and violin</li>
+            <li>I have a younger brother and sister</li>
+            <li>I run cross country and track & field</li>
+            <li>I ran the 2019 San Diego Half Marathon with a time of 1:37:39</li>
+            <li>I enjoy tutoring/teaching computer science and math</li>
+            <li>Favorite color: navy blue</li>
+            <li>Favorite food: pasta</li>
+            <li>Favorite movies: Jason Bourne series, Forrest Gump, Arrival</li>
+            <li>Favorite TV Shows: Mr. Robot, Parks and Recreation, White Collar</li>
+            <li>Favorite video games: Pok&eacute;mon, Smash Bros, and League of Legends</li>
+            <li><i><a class="text-info" href="music.html">Click here to judge my music taste</a></i></li>
+          </ul>
         </p>
-        <br/>
+      </div>
 
-        <div id="links">
-            <a href="https://github.com/AdoryVo" class="fa fa-github" target="_blank"></a>
-            <a href="https://repl.it/@AdoryVo" target="_blank">repl.it</a>
+      <div class="card-footer bg-dark-navy bg-dark text-center">
+        <div style="font-size: 50px;">
+          <a class="fab fa-github text-light card-link" href="https://github.com/AdoryVo" target="_blank"></a>
+          <a class="text-light card-link" href="https://repl.it/@AdoryVo" target="_blank">repl.it</a>
+          <a class="fab fa-linkedin-in text-light card-link" href="https://linkedin.com/in/AdoryVo" target="_blank"></a>
         </div>
 
-        <p>
-            this crappy website is still a work in progress - adory
-            <br/> Contact: adoryvo@gmail.com
-            <br/>
-            <a href="geometric_pattern/index.html">Background image and website (inspired by a hackclub.com tutorial) created with HTML & JS. Powered by AWS C9.</a>
+        <p class="card-text">
+          this crappy website is still a work in progress - adory
+          <br>
+          Contact: adoryvo@gmail.com
+          <br>
+          <a href="geometric_pattern/index.html">Background image</a> (inspired by a <a href="https://hackclub.com/workshops/geometric_pattern">hackclub.com tutorial</a>)
+          <br>
+          Website also inspired by a <a href="https://hackclub.com/workshops/personal_website">hackclub.com tutorial</a>
+          <br>
+          Created with <i class="fab fa-html5"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i>
         </p>
+      </div>
     </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
