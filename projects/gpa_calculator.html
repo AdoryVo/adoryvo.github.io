@@ -2,92 +2,146 @@
 <html>
 
 <head>
-    <title>Projects - GPA Calculator</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../styles.css" />
-    
-    <style>
-        input {
-            width: 50px;
-        }
-        
-        form {
-            text-align: left;
-            margin-left: 35%;
-            margin-right: 35%;
-        }
-    </style>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Created with HTML, CSS, & JS.">
+  <meta name="author" content="Adory Vo">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../new.css">
+
+  <title>GPA Calculator - Projects</title>
 </head>
 
-<div class="topnav" id="myTopnav">
-    <a href="../index.html">Home</a>
-    <div class="dropdown">
-        <button class="dropbtn" onclick="window.location.href = '../projects.html';" style="cursor:pointer;">Projects
-                    <i class="fa fa-caret-down"></i>
-                </button>
-        <div class="dropdown-content">
-            <a class="active" href="gpa_calculator.html">GPA Calculator</a>
-            <a href="hangman.html">Hangman</a>
-            <a href="tic-tac-toe.html">Tic-Tac-Toe</a>
-            <a href="pace_calculator.html">Pace Calculator</a>
-            <a href="result_time_calculator.html">Result Time Calculator</a>
-            <a href="lost_woods.html">Lost Woods Game</a>
-        </div>
-    </div>
-    <a href="../about.html">About</a>
-</div>
-
 <body>
-    <h1>GPA Calculator</h1>
-    <h3>Calculate your weighted and non-weighted GPA.</h3>
-    <h2 id="js">Language: JavaScript</h2>
-    <form id="frm1" action="/action_page.php" oninput="calculate()">
-        Number of Weighted Classes: <input type="number" name="weighted" value="4" min="0">
-        <br> Number of Non-weighted Classes: <input type="number" name="non-weighted" value="3" min="0"><br>
-        <br><b>Grades</b>
-        <br> Number of A's: <input type="number" name="A's" value="6" min="0">
-        <br> Number of B's: <input type="number" name="B's" value="1" min="0">
-        <br> Number of C's: <input type="number" name="C's" value="0" min="0">
-        <br> Number of D's: <input type="number" name="D's" value="0" min="0">
-        <br> Number of F's: <input type="number" name="F's" value="0" min="0">
-        <br>
-        <p style="color: lightblue;">
-            <b>Weighted GPA: </b><span id="w_result">4.43</span><br>
-            <b>Non-Weighted GPA: </b><span id="nw_result">3.86</span>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark-navy bg-light">
+    <a class="navbar-brand" href="../index.html">Home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbar">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../projects.html">Projects </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Body -->
+  <div class="container my-3 w-75">
+    <div class="card bg-navy bg-dark shadow-lg text-white">
+      <h5 class="card-header bg-dark-navy">GPA Calculator</h5>
+
+      <div class="card-body text-white">
+        <h5 class="card-title text-warning">JavaScript <i class="fab fa-js"></i></h5>
+        <h6 class="card-title">Calculate your weighted and non-weighted GPA.</h6>
+        <p class="card-text">
+          <form id="frm1" oninput="calculate()">
+            <div class="form-group">
+              <label for="weighted">Number of Weighted Classes:</label>
+              <input type="number" class="form-control w-25" name="weighted" value="4" min="0">
+            </div>
+            <div class="form-group">
+              <label for="non-weighted">Number of Non-weighted Classes:</label>
+              <input type="number" class="form-control w-25" name="non-weighted" value="3" min="0">
+            </div>
+            <small class="form-text text-muted">
+              Total Classes: <span id="num_classes">7</span>
+            </small>
+
+            <br>
+            <h5>Grades</h5>
+            <div class="form-group">
+              <label for="A's">Number of A's:</label>
+              <input type="number" class="form-control w-25" name="A's" value="6" min="0">
+            </div>
+            <div class="form-group">
+              <label for="B's">Number of B's: </label>
+              <input type="number" class="form-control w-25" name="B's" value="0" min="0">
+            </div>
+            <div class="form-group">
+              <label for="C's">Number of C's: </label>
+              <input type="number" class="form-control w-25" name="C's" value="0" min="0">
+            </div>
+            <div class="form-group">
+              <label for="D's">Number of D's: </label>
+              <input type="number" class="form-control w-25" name="D's" value="0" min="0">
+            </div>
+            <div class="form-group">
+              <label for="F's">Number of F's: </label>
+              <input type="number" class="form-control w-25" name="F's" value="0" min="0">
+            </div>
+            <p style="color: lightblue;">
+              <b>Weighted GPA: </b><span id="w_result">4.43</span><br>
+              <b>Non-Weighted GPA: </b><span id="nw_result">3.86</span>
+            </p>
+          </form>
         </p>
-    </form>
 
-    <h2 id="py">Language: Python</h2>
-    <p>To try the project, click the run button then input responses into the console.</p>
-    <iframe height="600px" width="80%" src="https://repl.it/@AdoryVo/GPA-Calculator?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <hr class="bg-white">
 
-    <script>
-        function calculate() {
-            var form = document.getElementById("frm1");
-            var numWeighted = parseInt(form.elements["weighted"].value);
-            var numNonweighted = parseInt(form.elements["non-weighted"].value);
-            var classes = numWeighted + numNonweighted;
-            var grades = [];
-            var sum = 0.0;
+        <h5 class="card-title text-primary">Python <i class="fab fa-python"></i></h5>
+        <p class="card-text">
+          To try the project, click the run button then input responses into the console.
+          <iframe height="600px" width="100%" src="https://repl.it/@AdoryVo/Hangman?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
+            sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        </p>
+      </div>
 
-            var dict1 = { 4: "A's", 3: "B's", 2: "C's", 1: "D's", 0: "F's" };
-            var letter;
-            3
-            for (letter in dict1) {
-                var numOfGrade = form.elements[dict1[letter]].value;
-                grades.push(numOfGrade);
-                sum += numOfGrade * letter;
-            }
+      <div class="card-footer bg-dark-navy bg-dark text-center">
+        <div style="font-size: 50px;">
+          <a class="fab fa-github text-light card-link" href="https://github.com/AdoryVo" target="_blank"></a>
+          <a class="fab fa-linkedin-in text-light card-link" href="https://linkedin.com/in/AdoryVo" target="_blank"></a>
+        </div>
+        Created with <i class="fab fa-html5"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i>
+      </div>
+    </div>
+  </div>
 
-            for (letter in dict1) {
-                var numOfGrade = form.elements[dict1[letter]].value;
-                form.elements[dict1[letter]].max = classes - grades[0] - grades[1] - grades[2] - grades[3] - grades[4] + numOfGrade;
-            }
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    function calculate() {
+      var form = document.getElementById("frm1");
+      var numWeighted = parseInt(form.elements["weighted"].value);
+      var numNonweighted = parseInt(form.elements["non-weighted"].value);
+      var classes = numWeighted + numNonweighted;
+      var grades = [];
+      var sum = 0.0;
 
-            document.getElementById("nw_result").innerHTML = (sum / classes).toFixed(2);
-            document.getElementById("w_result").innerHTML = ((sum + numWeighted) / classes).toFixed(2);
-        }
-    </script>
+      var dict1 = {
+        4: "A's",
+        3: "B's",
+        2: "C's",
+        1: "D's",
+        0: "F's"
+      };
+
+      document.getElementById("num_classes").innerHTML = classes;
+
+      var letter;
+      for (letter in dict1) {
+        var numOfGrade = form.elements[dict1[letter]].value;
+        grades.push(numOfGrade);
+        sum += numOfGrade * letter;
+      }
+
+      for (letter in dict1) {
+        var numOfGrade = form.elements[dict1[letter]].value;
+        form.elements[dict1[letter]].max = classes - grades[0] - grades[1] - grades[2] - grades[3] - grades[4] + numOfGrade;
+      }
+
+      document.getElementById("nw_result").innerHTML = (sum / classes).toFixed(2);
+      document.getElementById("w_result").innerHTML = ((sum + numWeighted) / classes).toFixed(2);
+    }
+  </script>
 </body>
 
 </html>
