@@ -2,32 +2,40 @@
 @import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
 
 body {
-  background-image: url("images/scales.png");
-  font-family: 'Livvic', sans-serif;
+    background-image: url("images/scales.png");
+    font-family: 'Livvic', sans-serif;
 }
 
 /* Custom Colors & Effects */
 .bg-navy {
-  background-color: #2a3b4a!important;
+    background-color: #2a3b4a !important;
 }
 
 .bg-dark-navy {
-  background-color: #0e1f2e!important;
+    background-color: #0e1f2e !important;
 }
 
 .border-navy {
-  border-color: #0e1f2e!important;
-  border-width: thick!important;
+    border-color: #0e1f2e !important;
+    border-width: thick !important;
 }
 
 #shadow {
-  box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
 }
 
 /* Home Page */
 #home-card {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+/* Projects */
+/* Media */
+@media (max-width: 480px) {
+    input.w-25 {
+        width: 100% !important;
+    }
 }
