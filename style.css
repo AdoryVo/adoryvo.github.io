@@ -6,7 +6,7 @@ body {
     font-family: 'Livvic', sans-serif;
 }
 
-/* Custom Colors & Effects */
+/* ----- Custom Colors & Effects ----- */
 .bg-navy {
     background-color: #2a3b4a !important;
 }
@@ -24,7 +24,7 @@ body {
     box-shadow: 0 0 10px black;
 }
 
-/* Home Page */
+/* ----- Home Page ----- */
 #home-card {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -32,13 +32,14 @@ body {
     left: 50%;
 }
 
-/* Projects */
+/* ----- Projects ----- */
+/* EasyCheck */
 #avg {
     color: LimeGreen;
 }
 
 
-/* Media */
+/* ----- Media ----- */
 @media (max-width: 480px) {
     input.w-25 {
         width: 100% !important;
