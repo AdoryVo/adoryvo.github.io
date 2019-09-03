@@ -33,6 +33,11 @@ body {
 }
 
 /* Projects */
+#avg {
+    color: LimeGreen;
+}
+
+
 /* Media */
 @media (max-width: 480px) {
     input.w-25 {
