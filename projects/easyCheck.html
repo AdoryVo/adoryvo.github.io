@@ -72,28 +72,43 @@
                     </form>
 
                     <h6>Payers (Work in progress)</h6>
-                    <table class="table table-striped text-white">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Name</th>
-                                <th scope="col">Subtotal Share</th>
-                                <th scope="col">Tip Share</th>
-                                <th scope="col">Total Share</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <div id="payers">
+                    <div class="table-responsive">
+                        <table class="table table-striped text-white">
+                            <thead>
                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>Michael</td>
-                                    <td>$0.00</td>
-                                    <td>$0.00</td>
-                                    <td>$0.00</td>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Subtotal Share</th>
+                                    <th scope="col">Tip Share</th>
+                                    <th scope="col">Total Share</th>
                                 </tr>
-                            </div>
-                        </tbody>
-                    </table>
+                            </thead>
+                            <tbody>
+                                <div id="payers">
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>Michael</td>
+                                        <td>$0.00</td>
+                                        <td>$0.00</td>
+                                        <td>$0.00</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <form id="frm2">
+                                            <td><input type="text" class="form-control w-75" placeholder="Name"></td>
+                                            <td><input type="number" class="form-control w-50" placeholder="0.00"></td>
+                                            <td><input type="number" class="form-control w-50" placeholder="0.00"></td>
+                                            <td>
+                                                    <input type="number" class="form-control w-50 d-inline" placeholder="0.00">&emsp;
+                                                    <button type="submit" class="bg-primary border-0  rounded-circle"><i class="fas fa-plus text-white"></i></button>
+                                            </td>
+                                        </form>
+                                    </tr>
+                                </div>
+                            </tbody>
+                        </table>
+                    </div>
                 </p>
             </div>
 
