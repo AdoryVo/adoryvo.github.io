@@ -1,14 +1,15 @@
 @import url('https://use.fontawesome.com/releases/v5.10.2/css/all.css');
 @import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
 
-body {
-    background-image: url("images/scales.png");
-    font-family: 'Livvic', sans-serif;
-}
-
-/* ----- Custom Colors & Effects ----- */
+/*
+ * Custom Styles
+ */
 .bg-navy {
     background-color: #2a3b4a !important;
+}
+
+.bg-light-navy {
+    background-color: #12283b !important;
 }
 
 .bg-dark-navy {
@@ -20,16 +21,23 @@ body {
     border-width: thick !important;
 }
 
-#shadow {
-    box-shadow: 0 0 10px black;
-}
+/*
+ * NavBar
+ */
+
+
+/*
+ * Main Page Content
+ */
 
 /* ----- Home Page ----- */
-#home-card {
-    position: absolute;
-    transform: translate(-50%, -50%);
-    top: 50%;
-    left: 50%;
+body {
+    background-image: url("images/scales.png");
+    font-family: 'Livvic', sans-serif;
+}
+
+#shadow {
+    box-shadow: 0 0 10px black;
 }
 
 /* ----- Projects ----- */
@@ -39,9 +47,55 @@ body {
 }
 
 
-/* ----- Media ----- */
-@media (max-width: 480px) {
+/*
+ * Footer
+ */
+
+
+/*
+ * Media Queries
+ */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    #homeCard {
+        width: 24rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
     input.w-25 {
         width: 100% !important;
     }
+
+    input.w-50 {
+        width: 100% !important;
+    }
+
+    input.w-75 {
+        width: 100% !important;
+    }
+
+    .container {
+        width: 100% !important;
+    }
 }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}

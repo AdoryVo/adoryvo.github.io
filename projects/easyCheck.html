@@ -8,7 +8,8 @@
     <meta name="description" content="EasyCheck - Projects">
     <meta name="author" content="Adory Vo">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
 
     <title>EasyCheck - Projects</title>
@@ -16,118 +17,130 @@
 
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-dark-navy navbar-expand-lg">
-        <a class="navbar-brand" href="../index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="../projects.html">Projects </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../about.html">About</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark-navy navbar-expand-lg border-bottom border-info">
+    <a class="navbar-brand" href="index.html">Home</a>
 
-    <!-- Body -->
-    <div class="container my-3 w-75">
-        <div class="card bg-navy shadow-lg text-light">
-            <h5 class="card-header bg-dark-navy">EasyCheck</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <!-- JavaScript -->
-            <div class="card-body text-light">
-                <h5 class="card-title text-warning">JavaScript <i class="fab fa-js"></i></h5>
-                <h6 class="card-title">Calculate how to split the check.</h6>
-                <p class="card-text">
-                    <form id="frm1" oninput="calcResult()" onsubmit="return false;">
-                        <div class="form-group">
-                            <label for="subtotal">Subtotal Amount ($):</label>
-                            <input type="number" class="form-control w-25" name="subtotal" placeholder="0.00" step=".01" min="0">
-                        </div>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="../projects.html">Projects</a>
+            </li>
 
-                        <div class="form-group">
-                            <label for="tip">Tip (%):</label>
-                            <input type="number" class="form-control w-25" name="tip" placeholder="15" min="0">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="num_payers">Number of payers:</label>
-                            <input type="number" class="form-control w-25" name="num_payers" placeholder="0" min="0">
-                        </div>
-
-                        <p style="color: lightblue;">
-                            <b>Result: </b><br>
-                            <b>Subtotal: </b>$<span id="subtotal">0.00</span>
-                            &emsp;<span id="avg">($<span id="avg_subtotal">0.00</span>/person)</span><br>
-                            <b>Tip (<span id="tip_percent">15</span>%): </b>$<span id="tip">0.00</span>
-                            &emsp;<span id="avg">($<span id="avg_tip">0.00</span>/person)</span><br />
-                            <b>Total: </b>$<span id="total">0.00</span>
-                            &emsp;<span id="avg">($<span id="avg_total">0.00</span>/person)</span>
-                        </p>
-                    </form>
-
-                    <h6>Payers (Work in progress)</h6>
-                    <div class="table-responsive">
-                        <table class="table table-striped text-white">
-                            <thead>
-                                <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Subtotal Share</th>
-                                    <th scope="col">Tip Share</th>
-                                    <th scope="col">Total Share</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <div id="payers">
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Michael</td>
-                                        <td>$0.00</td>
-                                        <td>$0.00</td>
-                                        <td>$0.00</td>
-                                    </tr>
-
-                                    <tr>
-                                        <th scope="row">2</th>
-                                        <form id="frm2">
-                                            <td><input type="text" class="form-control w-75" placeholder="Name"></td>
-                                            <td><input type="number" class="form-control w-50" placeholder="0.00"></td>
-                                            <td><input type="number" class="form-control w-50" placeholder="0.00"></td>
-                                            <td>
-                                                    <input type="number" class="form-control w-50 d-inline" placeholder="0.00">&emsp;
-                                                    <button type="submit" class="bg-primary border-0  rounded-circle"><i class="fas fa-plus text-white"></i></button>
-                                            </td>
-                                        </form>
-                                    </tr>
-                                </div>
-                            </tbody>
-                        </table>
-                    </div>
-                </p>
-            </div>
-
-            <!-- Footer -->
-            <div class="card-footer bg-dark-navy text-center">
-                <div style="font-size: 50px;">
-                    <a class="fab fa-github text-light card-link" href="https://github.com/AdoryVo" target="_blank"></a>
-                    <a class="fab fa-linkedin-in text-light card-link" href="https://linkedin.com/in/AdoryVo" target="_blank"></a>
-                </div>
-                Created with <i class="fab fa-html5"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-css3-alt"></i> <i class="fab fa-js"></i>
-            </div>
-
-        </div>
+            <li class="nav-item">
+                <a class="nav-link" href="../about.html">About</a>
+            </li>
+        </ul>
     </div>
+</nav>
 
-    <script src="js/easyCheck.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<!-- Body -->
+<div class="container my-3 w-75">
+    <div class="card bg-navy shadow-lg text-light">
+        <h5 class="card-header bg-dark-navy">EasyCheck</h5>
+
+        <!-- JavaScript -->
+        <div class="card-body text-light">
+            <h5 class="card-title text-warning">JavaScript <i class="fab fa-js"></i></h5>
+            <h6 class="card-title">Calculate how to split the check.</h6>
+            <p class="card-text">
+                <form id="frm1" oninput="calcResult()" onsubmit="return false;">
+                    <div class="form-group">
+                        <label for="subtotal">Subtotal Amount ($):</label>
+                        <input type="number" class="form-control w-25" name="subtotal" placeholder="0.00" step=".01"
+                               min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tip">Tip (%):</label>
+                        <input type="number" class="form-control w-25" name="tip" placeholder="15" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="num_payers">Number of payers:</label>
+                        <input type="number" class="form-control w-25" name="num_payers" placeholder="0" min="0">
+                    </div>
+
+            <p style="color: lightblue;">
+                <b>Result: </b><br>
+                <b>Subtotal: </b>$<span id="subtotal">0.00</span>
+                &emsp;<span id="avg">($<span id="avg_subtotal">0.00</span>/person)</span><br>
+                <b>Tip (<span id="tip_percent">15</span>%): </b>$<span id="tip">0.00</span>
+                &emsp;<span id="avg">($<span id="avg_tip">0.00</span>/person)</span><br/>
+                <b>Total: </b>$<span id="total">0.00</span>
+                &emsp;<span id="avg">($<span id="avg_total">0.00</span>/person)</span>
+            </p>
+            </form>
+
+            <h6>Payers (Work in progress)</h6>
+            <div class="table-responsive">
+                <table class="table table-striped text-white">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name&emsp;&emsp;&emsp;&emsp;</th>
+                        <th scope="col">Subtotal Share</th>
+                        <th scope="col">Tip Share&emsp;</th>
+                        <th scope="col">Total Share&emsp;</th>
+                        <th scope="col">Add</th>
+                    </tr>
+                    </thead>
+                    <tbody id="payers">
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Michael</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                        <td></td>
+                    </tr>
+
+                    <tr id="add_form">
+                        <th scope="row" class="align-middle" style="vertical-align: middle !important;">2</th>
+                        <td><input type="text" id="add_name" class="form-control w-75" placeholder="Name"></td>
+                        <td><input type="number" id="add_subtotal" class="form-control w-50" placeholder="0.00"></td>
+                        <td><input type="number" id="add_tip" class="form-control w-50" placeholder="0.00"></td>
+                        <td><input type="number" id="add_total" class="form-control w-50" placeholder="0.00"></td>
+                        <td class="align-middle">
+                            <button type="button" id="add" class="bg-primary border-0 rounded-circle"><i
+                                    class="fas fa-plus text-white"></i></button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="card-footer bg-dark-navy text-center">
+            <div style="font-size: 50px;">
+                <a class="fab fa-github text-light card-link" href="https://github.com/AdoryVo" target="_blank"></a>
+                <a class="fab fa-linkedin-in text-light card-link" href="https://linkedin.com/in/AdoryVo"
+                   target="_blank"></a>
+            </div>
+            Created with <i class="fab fa-html5"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-js"></i>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/easyCheck.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

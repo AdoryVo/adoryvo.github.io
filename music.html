@@ -8,7 +8,8 @@
     <meta name="description" content="Music">
     <meta name="author" content="Adory Vo">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 
     <title>Music</title>
@@ -16,106 +17,123 @@
 
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-dark bg-dark-navy navbar-expand-lg">
-        <a class="navbar-brand" href="index.html">Home</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbar">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects </a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="about.html">About</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<!-- Navbar -->
+<nav class="navbar navbar-dark bg-dark-navy navbar-expand-lg border-bottom border-info">
+    <a class="navbar-brand" href="index.html">Home</a>
 
-    <!-- Body -->
-    <div class="container text-light my-3 w-75">
-        <div class="card bg-navy shadow-lg">
-            <h5 class="card-header bg-dark-navy text-light">Music</h5>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
+            aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <div class="card-body text-dark">
-                <p>
-                    <button class="btn btn-info text-light" type="button" data-toggle="collapse" data-target="#tracks-card" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-music"></i>
-                        Favorite Tracks
-                    </button>
-                </p>
-                <div class="collapse mb-3" id="tracks-card">
-                    <ul class="list-group">
-                        <li class="list-group-item">Anderson .Paak - Tints (ft. Kendrick Lamar)</li>
-                        <li class="list-group-item">Tyler, the Creator - I THINK</li>
-                        <li class="list-group-item">Kendrick Lamar - Alright</li>
-                        <li class="list-group-item">JPEGMAFIA - 1539 N. Calvert</li>
-                        <li class="list-group-item">Little Simz - Backseat</li>
-                        <li class="list-group-item">Vampire Weekend - This Life</li>
-                        <li class="list-group-item">Rex Orange County, Benny Sings - Loving is Easy</li>
-                        <li class="list-group-item">Purple Mountains - Margaritas at the Mall</li>
-                        <li class="list-group-item">Earth, Wind, & Fire - September</li>
-                        <li class="list-group-item">Toto - Africa</li>
-                    </ul>
-                </div>
+    <div class="collapse navbar-collapse" id="navbar">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="projects.html">Projects</a>
+            </li>
 
-                <p>
-                    <button class="btn btn-info text-light" type="button" data-toggle="collapse" data-target="#albums-card" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-compact-disc"></i>
-                        Favorite Albums
-                    </button>
-                </p>
-                <div class="collapse mb-3" id="albums-card">
-                    <ul class="list-group">
-                        <li class="list-group-item">Tyler, the Creator - IGOR</li>
-                        <li class="list-group-item">Kendrick Lamar - To Pimp A Butterfly</li>
-                        <li class="list-group-item">JID - DiCaprio 2</li>
-                        <li class="list-group-item">Little Simz - GREY Area</li>
-                        <li class="list-group-item">The Dave Brubeck Quartet - Time Out</li>
-                        <li class="list-group-item">Vampire Weekend - Father of the Bride</li>
-                        <li class="list-group-item">Rex Orange County - Apricot Princess</li>
-                        <li class="list-group-item">Benny Sings - City Pop</li>
-                        <li class="list-group-item">Ariana Grande - thank u, next</li>
-                        <li class="list-group-item">Fleet Foxes - Helplessness Blues</li>
-                    </ul>
-                </div>
+            <li class="nav-item active">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-                <p>
-                    <button class="btn btn-info text-light" type="button" data-toggle="collapse" data-target="#artists-card" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fas fa-user"></i>
-                        Favorite Artists (excluding those mentioned above)
-                    </button>
-                </p>
-                <div class="collapse mb-3" id="artists-card">
-                    <ul class="list-group">
-                        <li class="list-group-item">Denzel Curry</li>
-                        <li class="list-group-item">Vince Staples</li>
-                        <li class="list-group-item">Noname</li>
-                        <li class="list-group-item">A Tribe Called Quest</li>
-                        <li class="list-group-item">Rich Brian</li>
-                        <li class="list-group-item">Danny Brown</li>
-                        <li class="list-group-item">Childish Gambino</li>
-                        <li class="list-group-item">Jinsang</li>
-                        <li class="list-group-item">Thundercat</li>
-                        <li class="list-group-item">Mac DeMarco</li>
+<!-- Body -->
+<div class="container text-light my-3 w-75">
+    <div class="card bg-navy shadow-lg">
+        <h5 class="card-header bg-dark-navy text-light">Music</h5>
 
-                    </ul>
-                </div>
-
-                <a class="btn btn-success" href="https://open.spotify.com/user/exobyterotmg?si=kkL4D5nHTQykkLNksjadZQ" target="_blank">
-                    <i class="fab fa-spotify"></i>
-                    Spotify Account
-                </a>
+        <div class="card-body text-dark">
+            <!-- Favorite Tracks -->
+            <p>
+                <button class="btn btn-info text-light" type="button" data-toggle="collapse" data-target="#tracks-card"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-music"></i>
+                    Favorite Tracks
+                </button>
+            </p>
+            <div class="collapse mb-3" id="tracks-card">
+                <ul class="list-group">
+                    <li class="list-group-item">Anderson .Paak - Tints (ft. Kendrick Lamar)</li>
+                    <li class="list-group-item">Tyler, the Creator - I THINK</li>
+                    <li class="list-group-item">Kendrick Lamar - Alright</li>
+                    <li class="list-group-item">JPEGMAFIA - 1539 N. Calvert</li>
+                    <li class="list-group-item">Little Simz - Backseat</li>
+                    <li class="list-group-item">Vampire Weekend - This Life</li>
+                    <li class="list-group-item">Rex Orange County, Benny Sings - Loving is Easy</li>
+                    <li class="list-group-item">Frank Ocean - Chanel</li>
+                    <li class="list-group-item">Earth, Wind, & Fire - September</li>
+                    <li class="list-group-item">Toto - Africa</li>
+                </ul>
             </div>
 
-        </div>
-    </div>
+            <!-- Favorite Albums -->
+            <p>
+                <button class="btn btn-info text-light" type="button" data-toggle="collapse" data-target="#albums-card"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-compact-disc"></i>
+                    Favorite Albums
+                </button>
+            </p>
+            <div class="collapse mb-3" id="albums-card">
+                <ul class="list-group">
+                    <li class="list-group-item">Tyler, the Creator - IGOR</li>
+                    <li class="list-group-item">Kendrick Lamar - To Pimp A Butterfly</li>
+                    <li class="list-group-item">JID - DiCaprio 2</li>
+                    <li class="list-group-item">Little Simz - GREY Area</li>
+                    <li class="list-group-item">The Dave Brubeck Quartet - Time Out</li>
+                    <li class="list-group-item">Vampire Weekend - Father of the Bride</li>
+                    <li class="list-group-item">Daft Punk - Discovery</li>
+                    <li class="list-group-item">Benny Sings - City Pop</li>
+                    <li class="list-group-item">Ariana Grande - thank u, next</li>
+                    <li class="list-group-item">Fleet Foxes - Helplessness Blues</li>
+                </ul>
+            </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+            <!-- Favorite Artists -->
+            <p>
+                <button class="btn btn-info text-light" type="button" data-toggle="collapse" data-target="#artists-card"
+                        aria-expanded="false" aria-controls="collapseExample">
+                    <i class="fas fa-user"></i>
+                    Favorite Artists (excluding those mentioned above)
+                </button>
+            </p>
+            <div class="collapse mb-3" id="artists-card">
+                <ul class="list-group">
+                    <li class="list-group-item">Denzel Curry</li>
+                    <li class="list-group-item">Vince Staples</li>
+                    <li class="list-group-item">Noname</li>
+                    <li class="list-group-item">A Tribe Called Quest</li>
+                    <li class="list-group-item">Kanye West</li>
+                    <li class="list-group-item">Danny Brown</li>
+                    <li class="list-group-item">Anderson .Paak</li>
+                    <li class="list-group-item">Jinsang</li>
+                    <li class="list-group-item">Thundercat</li>
+                    <li class="list-group-item">Rex Orange County</li>
+
+                </ul>
+            </div>
+
+            <a class="btn btn-success" href="https://open.spotify.com/user/exobyterotmg?si=kkL4D5nHTQykkLNksjadZQ"
+               target="_blank">
+                <i class="fab fa-spotify"></i>
+                Spotify Account
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
