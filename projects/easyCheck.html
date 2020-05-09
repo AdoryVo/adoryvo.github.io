@@ -8,8 +8,8 @@
     <meta name="description" content="EasyCheck - Projects">
     <meta name="author" content="Adory Vo">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="../style.css">
 
     <title>EasyCheck - Projects</title>
@@ -48,34 +48,36 @@
         <div class="card-body text-light">
             <h5 class="card-title text-warning">JavaScript <i class="fab fa-js"></i></h5>
             <h6 class="card-title">Calculate how to split the check.</h6>
-            <p class="card-text">
-                <form id="frm1" oninput="calcResult()" onsubmit="return false;">
-                    <div class="form-group">
-                        <label for="subtotal">Subtotal Amount ($):</label>
-                        <input type="number" class="form-control w-25" name="subtotal" placeholder="0.00" step=".01"
-                               min="0">
-                    </div>
 
-                    <div class="form-group">
-                        <label for="tip">Tip (%):</label>
-                        <input type="number" class="form-control w-25" name="tip" placeholder="15" min="0">
-                    </div>
+            <form id="frm1" oninput="calcResult()" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="subtotal">Subtotal Amount ($):</label>
+                    <input type="number" class="form-control w-25" name="subtotal" placeholder="0.00" step=".01"
+                           min="0">
+                </div>
 
-                    <div class="form-group">
-                        <label for="num_payers">Number of payers:</label>
-                        <input type="number" class="form-control w-25" name="num_payers" placeholder="0" min="0">
-                    </div>
+                <div class="form-group">
+                    <label for="tip">Tip (%):</label>
+                    <input type="number" class="form-control w-25" name="tip" placeholder="15" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="num_payers">Number of payers:</label>
+                    <input id="num_payers" type="number" class="form-control w-25" name="num_payers" placeholder="0"
+                           min="0">
+                </div>
+            </form>
 
             <p style="color: lightblue;">
                 <b>Result: </b><br>
                 <b>Subtotal: </b>$<span id="subtotal">0.00</span>
-                &emsp;<span id="avg">($<span id="avg_subtotal">0.00</span>/person)</span><br>
+                &emsp;<span>($<span id="avg_subtotal">0.00</span>/person)</span><br>
                 <b>Tip (<span id="tip_percent">15</span>%): </b>$<span id="tip">0.00</span>
-                &emsp;<span id="avg">($<span id="avg_tip">0.00</span>/person)</span><br/>
+                &emsp;<span>($<span id="avg_tip">0.00</span>/person)</span><br/>
                 <b>Total: </b>$<span id="total">0.00</span>
-                &emsp;<span id="avg">($<span id="avg_total">0.00</span>/person)</span>
+                &emsp;<span>($<span id="avg_total">0.00</span>/person)</span>
             </p>
-            </form>
+
 
             <h6>Payers (Work in progress)</h6>
             <div class="table-responsive">
@@ -114,7 +116,18 @@
                     </tbody>
                 </table>
             </div>
+
+            <hr class="bg-white">
+
+            <!-- Python -->
+            <h5 id="py" class="card-title text-primary">Python <i class="fab fa-python"></i></h5>
+            <p class="card-text">
+                To try the project, click the run button then input responses into the console.
+                <iframe height="600px" width="100%" src="https://repl.it/@AdoryVo/EasyCheck?lite=true"
+                        scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
+                        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </p>
+
         </div>
 
         <!-- Footer -->
@@ -132,14 +145,14 @@
 </div>
 
 <script src="js/easyCheck.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
         crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
 </body>
 
