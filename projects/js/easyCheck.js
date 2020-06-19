@@ -66,7 +66,6 @@ function removePayer(rowNum) {
 
         if (i !== payer_table.children.length - 1)
         {
-            console.log(row.children[5].children[0])
             row.children[5].children[0].setAttribute('onclick',`removePayer(${parseInt(oldRowNum) - 1})`);
         }
     }
