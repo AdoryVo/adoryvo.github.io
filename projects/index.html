@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Scales Image - Projects">
+    <meta name="description" content="Projects">
     <meta name="author" content="Adory Vo">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
 
-    <title>Scales Image - Projects</title>
+    <title>Projects</title>
 </head>
 
 
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark-navy navbar-expand-lg border-bottom border-info">
-    <a class="navbar-brand" href="index.html">Home</a>
+    <a class="navbar-brand" href="../index.html">Home</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="../projects.html">Projects</a>
+                <a class="nav-link" href="index.html">Projects</a>
             </li>
 
             <li class="nav-item">
@@ -40,43 +39,90 @@
 </nav>
 
 <!-- Body -->
-<div class="container my-3 w-75">
+<div class="container text-light my-3 w-75">
     <div class="card bg-navy shadow-lg text-light">
-        <h5 class="card-header bg-dark-navy">Scales Background</h5>
+        <h5 class="card-header bg-dark-navy">Projects</h5>
 
-        <div class="card-body text-light">
-            <h5 class="card-title text-warning">Javascript <i class="fab fa-js"></i></h5>
-            <p class="card-text">
-                To try the project, click the run button then input responses into the console.
-                <iframe height="600px" width="100%" src="https://repl.it/@AdoryVo/Scales?lite=true" scrolling="no"
-                        frameborder="no" allowtransparency="true" allowfullscreen="true"
-                        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+        <div class="card-body">
+            <p>
+                <button class="btn btn-primary text-warning" type="button" data-toggle="collapse"
+                        data-target="#python-card" aria-expanded="false">
+                    <i class="fab fa-python"></i>
+                    Python
+                </button>
             </p>
-        </div>
-
-        <!-- Footer-->
-        <div class="card-footer bg-dark-navy text-center">
-            <div style="font-size: 50px;">
-                <a class="fab fa-github text-light card-link" href="https://github.com/AdoryVo" target="_blank"></a>
-                <a class="fab fa-linkedin-in text-light card-link" href="https://linkedin.com/in/AdoryVo"
-                   target="_blank"></a>
+            <div class="collapse mb-3" id="python-card">
+                <div class="list-group">
+                    <a href="gpa-calculator.html#py" class="list-group-item list-group-item-action">GPA
+                        Calculator</a>
+                    <a href="hangman.html" class="list-group-item list-group-item-action">Hangman</a>
+                    <a href="tic-tac-toe.html" class="list-group-item list-group-item-action">Tic-Tac-Toe</a>
+                    <a href="pace-calculator.html#py" class="list-group-item list-group-item-action">Average
+                        Pace Calculator</a>
+                    <a href="result-time-calculator.html#py" class="list-group-item list-group-item-action">Result
+                        Time Calculator</a>
+                    <a href="easyCheck.html#py" class="list-group-item list-group-item-action">EasyCheck (Check
+                        Split Calculator)</a>
+                </div>
             </div>
-            Created with <i class="fab fa-html5"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-js"></i>
+
+            <p>
+                <button class="btn btn-light text-danger" type="button" data-toggle="collapse" data-target="#java-card"
+                        aria-expanded="false">
+                    <i class="fab fa-java"></i>
+                    Java
+                </button>
+            </p>
+            <div class="collapse mb-3" id="java-card">
+                <div class="list-group">
+                    <a href="lost-woods.html" class="list-group-item list-group-item-action">Lost Woods
+                        Game</a>
+                </div>
+            </div>
+
+            <p>
+                <button class="btn btn-warning text-dark" type="button" data-toggle="collapse" data-target="#js-card"
+                        aria-expanded="false">
+                    <i class="fab fa-js"></i>
+                    Javascript
+                </button>
+            </p>
+            <div class="collapse mb-3" id="js-card">
+                <div class="list-group">
+                    <a href="gpa-calculator.html" class="list-group-item list-group-item-action">GPA
+                        Calculator</a>
+                    <a href="pace-calculator.html" class="list-group-item list-group-item-action">Pace
+                        Calculator</a>
+                    <a href="result-time-calculator.html" class="list-group-item list-group-item-action">Result
+                        Time Calculator</a>
+                    <a href="change-calculator.html" class="list-group-item list-group-item-action">Cash Change
+                        Calculator</a>
+                    <a href="easyCheck.html" class="list-group-item list-group-item-action">EasyCheck (Check
+                        Split Calculator)</a>
+                </div>
+            </div>
+
+            <p class="mb-0">
+                <button class="btn btn-danger text-light" type="button" data-toggle="collapse"
+                        data-target="#mathematica-card" aria-expanded="false">
+                    <i class="fas fa-square-root-alt"></i>
+                    Mathematica
+                </button>
+            </p>
+            <div class="collapse mt-3" id="mathematica-card">
+                <div class="list-group">
+                    <a href="beach.html" class="list-group-item list-group-item-action">Graphics3D - Beach</a>
+                </div>
+            </div>
         </div>
 
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

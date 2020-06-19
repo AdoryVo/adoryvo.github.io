@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,8 +8,7 @@
     <meta name="description" content="Hangman - Projects">
     <meta name="author" content="Adory Vo">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../style.css">
 
     <title>Hangman - Projects</title>
@@ -19,7 +18,7 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-dark bg-dark-navy navbar-expand-lg border-bottom border-info">
-    <a class="navbar-brand" href="index.html">Home</a>
+    <a class="navbar-brand" href="scales.html">Home</a>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +28,7 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="../projects.html">Projects</a>
+                <a class="nav-link" href="index.html">Projects</a>
             </li>
 
             <li class="nav-item">
@@ -48,8 +47,8 @@
             <h5 class="card-title text-primary">Python <i class="fab fa-python"></i></h5>
             <p class="card-text">
                 To try the project, click the run button then input responses into the console.
-                <iframe height="600px" width="100%" src="https://repl.it/@AdoryVo/Hangman?lite=true" scrolling="no"
-                        frameborder="no" allowtransparency="true" allowfullscreen="true"
+                <iframe height="600px" width="100%" src="https://repl.it/@AdoryVo/Hangman?lite=true"
+                        allowtransparency="true" allow="fullscreen" style="border: none;"
                         sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
             </p>
         </div>
@@ -61,22 +60,20 @@
                 <a class="fab fa-linkedin-in text-light card-link" href="https://linkedin.com/in/AdoryVo"
                    target="_blank"></a>
             </div>
-            Created with <i class="fab fa-html5"></i> <i class="fab fa-bootstrap"></i> <i class="fab fa-css3-alt"></i>
-            <i class="fab fa-js"></i>
+            Created with
+            <i class="fab fa-html5" title="HTML5"></i>
+            <i class="fab fa-bootstrap" title="Bootstrap"></i>
+            <i class="fab fa-css3-alt" title="CSS3"></i>
+            <i class="fab fa-js" title="JavaScript"></i>
         </div>
 
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

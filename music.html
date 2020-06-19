@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 
-<html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -8,8 +8,7 @@
     <meta name="description" content="Music">
     <meta name="author" content="Adory Vo">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
         .nav-pills .nav-link.active {
@@ -34,7 +33,7 @@
     <div class="collapse navbar-collapse" id="navbar">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
+                <a class="nav-link" href="projects/index.html">Projects</a>
             </li>
 
             <li class="nav-item active">
@@ -53,7 +52,7 @@
         <div class="card-body text-dark">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
 
-                <li class="nav-item mr-2">
+                <li class="nav-item mr-2 mb-2 mb-lg-0">
                     <a class="nav-link bg-info text-white active" id="pills-home-tab" data-toggle="pill"
                        href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">
                         <i class="fas fa-music"></i>
@@ -61,11 +60,11 @@
                     </a>
                 </li>
 
-                <li class="nav-item mr-2">
+                <li class="nav-item mr-2 mb-2 mb-lg-0">
                     <a class="nav-link bg-info text-white" id="pills-profile-tab" data-toggle="pill"
                        href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">
                         <i class="fas fa-compact-disc"></i>
-                        Favorite Albums
+                        Favorite Projects
                     </a>
                 </li>
 
@@ -73,7 +72,7 @@
                     <a class="nav-link bg-info text-white" id="pills-contact-tab" data-toggle="pill"
                        href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">
                         <i class="fas fa-user"></i>
-                        Favorite Artists (excluding those mentioned above)
+                        Favorite Artists
                     </a>
                 </li>
 
@@ -94,23 +93,14 @@
             <div class="tab-content shadow-lg" id="pills-tabContent">
 
                 <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                    <!--
-                    <ul class="list-group">
-                        <li class="list-group-item">Anderson .Paak - Tints (ft. Kendrick Lamar)</li>
-                        <li class="list-group-item">Tyler, the Creator - I THINK</li>
-                        <li class="list-group-item">Kendrick Lamar - Alright</li>
-                        <li class="list-group-item">JPEGMAFIA - 1539 N. Calvert</li>
-                        <li class="list-group-item">Little Simz - Backseat</li>
-                        <li class="list-group-item">Vampire Weekend - This Life</li>
-                        <li class="list-group-item">Rex Orange County, Benny Sings - Loving is Easy</li>
-                        <li class="list-group-item">Frank Ocean - Chanel</li>
-                        <li class="list-group-item">Earth, Wind, & Fire - September</li>
-                        <li class="list-group-item">Toto - Africa</li>
-                    </ul>
-                    -->
+                    <p class="text-white">
+                        (Volume Warning: Spotify's embedded features are very loud for some reason)
+                        <br>
+                        Click the Spotify Logo in the top right of the widget to open the playlist in Spotify.
+                    </p>
                     <iframe src="https://open.spotify.com/embed/playlist/5Mx2GuWlNpbpYRix5VbQxx"
                             class="rounded-lg align-middle" height="380"
-                            frameborder="0" allowtransparency="true" style="width: 100%"
+                            allowtransparency="true" style="width: 100%; border:none;"
                             allow="encrypted-media"></iframe>
                 </div>
 
@@ -120,27 +110,54 @@
                         <li class="list-group-item">Kendrick Lamar - To Pimp A Butterfly</li>
                         <li class="list-group-item">JID - DiCaprio 2</li>
                         <li class="list-group-item">Little Simz - GREY Area</li>
+                        <li class="list-group-item">Kids See Ghosts - Kids See Ghosts</li>
+                        <li class="list-group-item">JPEGMAFIA - All My Heroes Are Cornballs</li>
+                        <li class="list-group-item">Death Grips - Exmilitary</li>
+                        <li class="list-group-item">R.A.P. Ferreira - Purple Moonlight Pages</li>
+                        <li class="list-group-item">Drake - If You're Reading This It's Too Late</li>
+                        <li class="list-group-item">Jay-Z - 4:44</li>
+                        <li class="list-group-item">Daft Punk - Discovery</li>
+                        <li class="list-group-item">Flying Lotus - Cosmogramma</li>
                         <li class="list-group-item">The Dave Brubeck Quartet - Time Out</li>
                         <li class="list-group-item">Vampire Weekend - Father of the Bride</li>
-                        <li class="list-group-item">Daft Punk - Discovery</li>
-                        <li class="list-group-item">Benny Sings - City Pop</li>
+                        <li class="list-group-item">Kero Kero Bonito - Bonito Generation</li>
+                        <li class="list-group-item">Mac Miller - Circles</li>
+                        <li class="list-group-item">Frank Ocean - channel ORANGE</li>
                         <li class="list-group-item">Ariana Grande - thank u, next</li>
+                        <li class="list-group-item">Dua Lipa - Future Nostalgia</li>
+                        <li class="list-group-item">Rina Sawayama - SAWAYAMA</li>
+                        <li class="list-group-item">IDLES - Joy as an Act of Resistance</li>
+                        <li class="list-group-item">glass beach - the first glass beach album</li>
                         <li class="list-group-item">Fleet Foxes - Helplessness Blues</li>
+                        <li class="list-group-item">Mid-Air Thief - Crumbling</li>
                     </ul>
                 </div>
 
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
                     <ul class="list-group">
                         <li class="list-group-item">Denzel Curry</li>
-                        <li class="list-group-item">Vince Staples</li>
+                        <li class="list-group-item">JPEGMAFIA</li>
+                        <li class="list-group-item">Tyler, the Creator</li>
+                        <li class="list-group-item">Kendrick Lamar</li>
+                        <li class="list-group-item">Freddie Gibbs</li>
+                        <li class="list-group-item">Joey Bada$$</li>
+                        <li class="list-group-item">Brockhampton</li>
                         <li class="list-group-item">Noname</li>
                         <li class="list-group-item">A Tribe Called Quest</li>
                         <li class="list-group-item">Kanye West</li>
                         <li class="list-group-item">Danny Brown</li>
                         <li class="list-group-item">Anderson .Paak</li>
-                        <li class="list-group-item">Jinsang</li>
+                        <li class="list-group-item">Frank Ocean</li>
                         <li class="list-group-item">Thundercat</li>
+                        <li class="list-group-item">Rina Sawayama</li>
+                        <li class="list-group-item">Carly Rae Jepsen</li>
+                        <li class="list-group-item">Jinsang</li>
+                        <li class="list-group-item">Nujabes</li>
+                        <li class="list-group-item">Iglooghost</li>
                         <li class="list-group-item">Rex Orange County</li>
+                        <li class="list-group-item">Vampire Weekend</li>
+                        <li class="list-group-item">glass beach</li>
+                        <li class="list-group-item">IDLES</li>
                     </ul>
                 </div>
 
@@ -149,7 +166,7 @@
             <div class="mt-3 p-2 bg-dark-navy d-inline-block rounded-lg">
                 <iframe src="https://open.spotify.com/follow/1/?uri=spotify:user:exobyterotmg&size=detail&theme=dark&show-count=1"
                         class="align-middle"
-                        width="300" height="56" scrolling="no" frameborder="0"
+                        width="300" height="56"
                         style="border:none; overflow:hidden; font-family: 'Livvic', sans-serif;"
                         allowtransparency="true"></iframe>
             </div>
@@ -158,15 +175,10 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+<!-- jQuery, Popper.js, Bootstrap JS -->
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
