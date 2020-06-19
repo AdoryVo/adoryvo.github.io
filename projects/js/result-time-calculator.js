@@ -18,6 +18,6 @@ function calculate() {
 
     document.getElementById("dist").innerHTML = dist;
     document.getElementById("mins").innerHTML = mins;
-    document.getElementById("secs").innerHTML = secs;
+    document.getElementById("secs").innerHTML = secs.toString();
     document.getElementById("result").innerHTML = left + ":" + right + " min";
 }
