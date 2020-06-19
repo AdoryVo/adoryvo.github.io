@@ -1,19 +1,19 @@
-var payer_form = document.getElementById("add_form");
-var add_button = document.getElementById("add");
-var payer_table = document.getElementById("payers");
+let payer_form = document.getElementById("add_form");
+let add_button = document.getElementById("add");
+let payer_table = document.getElementById("payers");
 
 function moneyConv(money) {
     return parseFloat(money).toFixed(2);
 }
 
 function calcResult() {
-    var form = document.getElementById("frm1");
-    var subtotal = moneyConv(form.elements["subtotal"].value);
-    var tip_percent = form.elements["tip"].value;
-    var num_payers = form.elements["num_payers"].value;
+    let form = document.getElementById("frm1");
+    let subtotal = moneyConv(form.elements["subtotal"].value);
+    let tip_percent = form.elements["tip"].value;
+    let num_payers = form.elements["num_payers"].value;
 
-    var tip = moneyConv(subtotal * tip_percent / 100);
-    var total = moneyConv(parseFloat(subtotal) + parseFloat(tip))
+    let tip = moneyConv(subtotal * tip_percent / 100);
+    let total = moneyConv(parseFloat(subtotal) + parseFloat(tip))
 
     document.getElementById("subtotal").innerHTML = subtotal;
     document.getElementById("tip_percent").innerHTML = tip_percent;
@@ -29,7 +29,7 @@ function addPayer() {
     let payer = document.createElement("tr");
 
     let num = payer_form.children[0].cloneNode(true);
-    num.textContent = parseInt(num.textContent) + 1;
+    num.textContent = (parseInt(num.textContent) + 1).toString();
     payer.appendChild(num);
 
     //console.log(num.textContent);
@@ -43,7 +43,7 @@ function addPayer() {
     }
 
     let rmv_button = document.createElement("td");
-    rmv_button.classList = "align-middle";
+    rmv_button.classList.add("align-middle");
     rmv_button.innerHTML = "<button type='button' id='rmv' class='bg-danger border-0 rounded-circle'><i class='fas fa-trash text-white'></i></button>";
     payer.appendChild(rmv_button);
 

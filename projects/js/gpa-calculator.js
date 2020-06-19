@@ -1,12 +1,12 @@
 function calculate() {
-    var form = document.getElementById("frm1");
-    var numWeighted = parseInt(form.elements["weighted"].value);
-    var numNonweighted = parseInt(form.elements["non-weighted"].value);
-    var classes = numWeighted + numNonweighted;
-    var grades = [];
-    var sum = 0.0;
+    let form = document.getElementById("gpa-form");
+    let numWeighted = parseInt(form.elements["weighted"].value);
+    let numNonweighted = parseInt(form.elements["non-weighted"].value);
+    let classes = numWeighted + numNonweighted;
+    let grades = [];
+    let sum = 0.0;
 
-    var dict1 = {
+    const dict1 = {
         4: "A's",
         3: "B's",
         2: "C's",
@@ -14,17 +14,17 @@ function calculate() {
         0: "F's"
     };
 
-    document.getElementById("num_classes").innerHTML = classes;
+    document.getElementById("num_classes").innerHTML = classes.toString();
 
-    var letter;
+    let letter;
     for (letter in dict1) {
-        var numOfGrade = form.elements[dict1[letter]].value;
+        let numOfGrade = form.elements[dict1[letter]].value;
         grades.push(numOfGrade);
         sum += numOfGrade * letter;
     }
 
     for (letter in dict1) {
-        var numOfGrade = form.elements[dict1[letter]].value;
+        let numOfGrade = form.elements[dict1[letter]].value;
         form.elements[dict1[letter]].max = classes - grades[0] - grades[1] - grades[2] - grades[3] - grades[4] + numOfGrade;
     }
 
