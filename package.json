@@ -1,0 +1,24 @@
+{
+  "name": "adoryvo.github.io",
+  "version": "1.0.0",
+  "description": "Official Website created by Adory Vo using Bootstrap HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdoryVo/adoryvo.github.io.git"
+  },
+  "author": "Adory Vo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdoryVo/adoryvo.github.io/issues"
+  },
+  "homepage": "https://github.com/AdoryVo/adoryvo.github.io#readme",
+  "dependencies": {
+    "@popperjs/core": "^2.4.2",
+    "bootstrap": "^4.5.0",
+    "jquery": "^3.5.1"
+  }
+}
