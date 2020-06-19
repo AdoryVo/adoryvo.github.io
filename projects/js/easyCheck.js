@@ -1,5 +1,4 @@
 let payer_form = document.getElementById("add_form");
-let add_button = document.getElementById("add");
 let payer_table = document.getElementById("payers");
 
 function moneyConv(money) {
@@ -29,25 +28,46 @@ function addPayer() {
     let payer = document.createElement("tr");
 
     let num = payer_form.children[0].cloneNode(true);
-    num.textContent = (parseInt(num.textContent) + 1).toString();
+    num.textContent = parseInt(num.textContent).toString();
     payer.appendChild(num);
 
-    //console.log(num.textContent);
-    for (let i = 1; i < 5; i++) {
-        let col_value = payer_form.children[i].children[0].value;
-        console.log(col_value.children);
+    let nameCol = document.createElement("td");
+    nameCol.textContent = payer_form.children[1].children[0].children[0].value;
+    payer.appendChild(nameCol);
+
+    for (let i = 2; i < 5; i++) {
         let col = document.createElement("td");
-        col.textContent = col_value;
+        let col_value = payer_form.children[i].children[0].children[0].value;
+
+        col_value = parseInt(col_value).toFixed(2);
+
+        col.textContent = "$" + col_value.toString();
 
         payer.appendChild(col);
     }
 
     let rmv_button = document.createElement("td");
     rmv_button.classList.add("align-middle");
-    rmv_button.innerHTML = "<button type='button' id='rmv' class='bg-danger border-0 rounded-circle'><i class='fas fa-trash text-white'></i></button>";
+    rmv_button.innerHTML = `<button type='button' onclick='removePayer(${parseInt(num.textContent)})' class='bg-danger border-0 rounded-circle'><i class='fas fa-trash text-white'></i></button>`;
     payer.appendChild(rmv_button);
 
-    payer_table.appendChild(payer);
+    payer_table.insertBefore(payer, payer_form);
+    payer_form.children[0].textContent = (parseInt(num.textContent) + 1).toString();
 }
 
-add_button.addEventListener("click", addPayer);
+function removePayer(rowNum) {
+    payer_table.removeChild(payer_table.children[rowNum - 1]);
+
+    for (let i = rowNum - 1; i < payer_table.children.length; i++)
+    {
+        let row = payer_table.children[i];
+        let oldRowNum = row.children[0].textContent;
+        row.children[0].textContent = (parseInt(oldRowNum) - 1).toString();
+
+        if (i !== payer_table.children.length - 1)
+        {
+            console.log(row.children[5].children[0])
+            row.children[5].children[0].setAttribute('onclick',`removePayer(${parseInt(oldRowNum) - 1})`);
+        }
+    }
+}
