@@ -6,13 +6,13 @@ function moneyConv(money) {
 }
 
 function calcResult() {
-    let form = document.getElementById("frm1");
+    let form = document.getElementById("ezCheck-form");
     let subtotal = moneyConv(form.elements["subtotal"].value);
     let tip_percent = form.elements["tip"].value;
     let num_payers = form.elements["num_payers"].value;
 
     let tip = moneyConv(subtotal * tip_percent / 100);
-    let total = moneyConv(parseFloat(subtotal) + parseFloat(tip))
+    let total = moneyConv(parseFloat(subtotal) + parseFloat(tip));
 
     document.getElementById("subtotal").innerHTML = subtotal;
     document.getElementById("tip_percent").innerHTML = tip_percent;

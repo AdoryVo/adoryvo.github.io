@@ -14,7 +14,7 @@ function calculate() {
         0: "F's"
     };
 
-    document.getElementById("num_classes").innerHTML = classes.toString();
+    document.getElementById("num-classes").innerHTML = classes.toString();
 
     let letter;
     for (letter in dict1) {
@@ -28,6 +28,6 @@ function calculate() {
         form.elements[dict1[letter]].max = classes - grades[0] - grades[1] - grades[2] - grades[3] - grades[4] + numOfGrade;
     }
 
-    document.getElementById("nw_result").innerHTML = (sum / classes).toFixed(2);
-    document.getElementById("w_result").innerHTML = ((sum + numWeighted) / classes).toFixed(2);
+    document.getElementById("nw-result").innerHTML = (sum / classes).toFixed(2);
+    document.getElementById("w-result").innerHTML = ((sum + numWeighted) / classes).toFixed(2);
 }
