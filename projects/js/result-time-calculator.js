@@ -1,12 +1,13 @@
 function calculate() {
-    var form = document.getElementById("frm1");
-    var dist = form.elements["dist"].value;
-    var mins = form.elements["mins"].value;
-    var secs = parseInt(form.elements["secs"].value);
+    let form = document.getElementById("result-time-form");
+    let dist = form.elements["dist"].value;
+    let mins = form.elements["mins"].value;
+    let secs = parseInt(form.elements["secs"].value);
 
-    var total = (mins * 60 + secs) * dist;
-    var left = Math.floor(total / 60);
-    var right = total % 60;
+    let total = (mins * 60 + secs) * dist;
+    let left = Math.floor(total / 60);
+    let right = total % 60;
+
     if (right < 10) {
         right = "0" + right;
     }

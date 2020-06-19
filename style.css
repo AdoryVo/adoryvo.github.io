@@ -36,7 +36,7 @@ body {
     font-family: 'Livvic', sans-serif;
 }
 
-#shadow {
+#home-pic {
     box-shadow: 0 0 10px black;
 }
 
@@ -58,6 +58,7 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+    /* ----- Home Page ----- */
     #homeCard {
         width: 24rem;
     }
@@ -77,6 +78,7 @@ body {
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+    /* ----- Projects ----- */
     input.w-25 {
         width: 100% !important;
     }
@@ -91,6 +93,11 @@ body {
 
     .container {
         width: 100% !important;
+    }
+
+    /* ----- About Page ----- */
+    #about-footer {
+        position: relative;
     }
 }
 
