@@ -48,6 +48,7 @@ function addPayer() {
 
     let rmv_button = document.createElement("td");
     rmv_button.classList.add("align-middle");
+    rmv_button.classList.add("text-center");
     rmv_button.innerHTML = `<button type='button' onclick='removePayer(${num.textContent})' class='bg-danger border-0 rounded-circle'><i class='fas fa-trash text-white'></i></button>`;
     payer.appendChild(rmv_button);
 

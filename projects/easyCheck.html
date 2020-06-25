@@ -89,11 +89,11 @@
                     <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Name&emsp;&emsp;&emsp;&emsp;</th>
+                        <th scope="col">Name</th>
                         <th scope="col">Subtotal Share</th>
-                        <th scope="col">Tip Share&emsp;</th>
-                        <th scope="col">Total Share&emsp;</th>
-                        <th scope="col">Add</th>
+                        <th scope="col">Tip Share</th>
+                        <th scope="col">Total Share</th>
+                        <th scope="col">Add/Delete</th>
                     </tr>
                     </thead>
                     <tbody id="payers">
@@ -107,8 +107,9 @@
                                                         placeholder="0.00"></label></td>
                         <td><label for="add_total"><input type="number" id="add_total" class="form-control w-50"
                                                           placeholder="0.00"></label></td>
-                        <td class="align-middle">
-                            <button type="button" id="add" class="bg-primary border-0 rounded-circle" onclick="addPayer()">
+                        <td class="align-middle text-center">
+                            <button type="button" id="add" class="bg-primary border-0 rounded-circle"
+                                    onclick="addPayer()">
                                 <i class="fas fa-plus text-white"></i>
                             </button>
                         </td>
