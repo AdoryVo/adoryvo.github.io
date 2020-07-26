@@ -1,4 +1,4 @@
-@import url("https://use.fontawesome.com/releases/v5.13.1/css/all.css");
+@import "dependencies/fontawesome.min.css";
 @import url('https://fonts.googleapis.com/css?family=Livvic&display=swap');
 
 /*
@@ -21,6 +21,11 @@
     border-width: thick !important;
 }
 
+body {
+    background-image: url("images/scales.png");
+    font-family: 'Livvic', sans-serif;
+}
+
 /*
  * NavBar
  */
@@ -30,12 +35,8 @@
  * Main Page Content
  */
 
-/* ----- Home Page ----- */
-body {
-    background-image: url("images/scales.png");
-    font-family: 'Livvic', sans-serif;
-}
 
+/* ----- Home Page ----- */
 #home-pic {
     box-shadow: 0 0 10px black;
 }
