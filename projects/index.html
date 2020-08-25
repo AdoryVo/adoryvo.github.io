@@ -48,78 +48,85 @@
         <h5 class="card-header bg-dark-navy">Projects</h5>
 
         <div class="card-body">
-            <p>
-                <button class="btn btn-primary text-warning" type="button" data-toggle="collapse"
-                        data-target="#python-card" aria-expanded="false">
-                    <i class="fab fa-python"></i>
-                    Python
-                </button>
-            </p>
-            <div class="collapse mb-3" id="python-card">
-                <div class="list-group">
-                    <a href="gpa-calculator.html#py" class="list-group-item list-group-item-action">GPA
-                        Calculator</a>
-                    <a href="hangman.html" class="list-group-item list-group-item-action">Hangman</a>
-                    <a href="tic-tac-toe.html" class="list-group-item list-group-item-action">Tic-Tac-Toe</a>
-                    <a href="pace-calculator.html#py" class="list-group-item list-group-item-action">Average
-                        Pace Calculator</a>
-                    <a href="result-time-calculator.html#py" class="list-group-item list-group-item-action">Result
-                        Time Calculator</a>
-                    <a href="easyCheck.html#py" class="list-group-item list-group-item-action">EasyCheck (Check
-                        Split Calculator)</a>
-                </div>
-            </div>
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item mr-2 mb-2 mb-lg-0">
+                    <a class="nav-link bg-primary text-warning active" id="pills-home-tab" data-toggle="pill"
+                       href="#pills-py" role="tab" aria-controls="pills-home" aria-selected="true">
+                       <i class="fab fa-python"></i>
+                       Python
+                    </a>
+                </li>
 
-            <p>
-                <button class="btn btn-light text-danger" type="button" data-toggle="collapse" data-target="#java-card"
-                        aria-expanded="false">
-                    <i class="fab fa-java"></i>
-                    Java
-                </button>
-            </p>
-            <div class="collapse mb-3" id="java-card">
-                <div class="list-group">
-                    <a href="lost-woods.html" class="list-group-item list-group-item-action">Lost Woods
-                        Game</a>
-                </div>
-            </div>
+                <li class="nav-item mr-2 mb-2 mb-lg-0">
+                    <a class="nav-link bg-light text-danger" id="pills-profile-tab" data-toggle="pill"
+                       href="#pills-java" role="tab" aria-controls="pills-profile" aria-selected="false">
+                       <i class="fab fa-java"></i>
+                       Java
+                    </a>
+                </li>
 
-            <p>
-                <button class="btn btn-warning text-dark" type="button" data-toggle="collapse" data-target="#js-card"
-                        aria-expanded="false">
-                    <i class="fab fa-js"></i>
-                    JavaScript
-                </button>
-            </p>
-            <div class="collapse mb-3" id="js-card">
-                <div class="list-group">
-                    <a href="gpa-calculator.html" class="list-group-item list-group-item-action">GPA
-                        Calculator</a>
-                    <a href="pace-calculator.html" class="list-group-item list-group-item-action">Pace
-                        Calculator</a>
-                    <a href="result-time-calculator.html" class="list-group-item list-group-item-action">Result
-                        Time Calculator</a>
-                    <a href="change-calculator.html" class="list-group-item list-group-item-action">Cash Change
-                        Calculator</a>
-                    <a href="easyCheck.html" class="list-group-item list-group-item-action">EasyCheck (Check
-                        Split Calculator)</a>
-                </div>
-            </div>
+                <li class="nav-item mr-2 mb-2 mb-lg-0">
+                    <a class="nav-link bg-warning text-dark" id="pills-contact-tab" data-toggle="pill"
+                       href="#pills-js" role="tab" aria-controls="pills-contact" aria-selected="false">
+                       <i class="fab fa-js"></i>
+                       JavaScript
+                    </a>
+                </li>
 
-            <p class="mb-0">
-                <button class="btn btn-danger text-light" type="button" data-toggle="collapse"
-                        data-target="#mathematica-card" aria-expanded="false">
-                    <i class="fas fa-square-root-alt"></i>
+                <li class="nav-item mr-2">
+                    <a class="nav-link bg-danger text-light" id="pills-contact-tab" data-toggle="pill"
+                       href="#pills-mathematica" role="tab" aria-controls="pills-contact" aria-selected="false">
+                       <i class="fas fa-square-root-alt"></i>
                     Mathematica
-                </button>
-            </p>
-            <div class="collapse mt-3" id="mathematica-card">
-                <div class="list-group">
-                    <a href="beach.html" class="list-group-item list-group-item-action">Graphics3D - Beach</a>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content shadow-lg" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-py" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="list-group">
+                        <a href="gpa-calculator.html#py" class="list-group-item list-group-item-action">GPA
+                            Calculator</a>
+                        <a href="hangman.html" class="list-group-item list-group-item-action">Hangman</a>
+                        <a href="tic-tac-toe.html" class="list-group-item list-group-item-action">Tic-Tac-Toe</a>
+                        <a href="pace-calculator.html#py" class="list-group-item list-group-item-action">Average
+                            Pace Calculator</a>
+                        <a href="result-time-calculator.html#py" class="list-group-item list-group-item-action">Result
+                            Time Calculator</a>
+                        <a href="easyCheck.html#py" class="list-group-item list-group-item-action">EasyCheck (Check
+                            Split Calculator)</a>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-java" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="list-group">
+                        <a href="lost-woods.html" class="list-group-item list-group-item-action">Lost Woods
+                            Game</a>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-js" role="tabpanel" aria-labelledby="pills-contact-tab">
+                    <div class="list-group">
+                        <a href="gpa-calculator.html" class="list-group-item list-group-item-action">GPA
+                            Calculator</a>
+                        <a href="pace-calculator.html" class="list-group-item list-group-item-action">Pace
+                            Calculator</a>
+                        <a href="result-time-calculator.html" class="list-group-item list-group-item-action">Result
+                            Time Calculator</a>
+                        <a href="change-calculator.html" class="list-group-item list-group-item-action">Cash Change
+                            Calculator</a>
+                        <a href="easyCheck.html" class="list-group-item list-group-item-action">EasyCheck (Check
+                            Split Calculator)</a>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="pills-mathematica" role="tabpanel" aria-labelledby="pills-profile-tab">
+                    <div class="list-group">
+                        <a href="beach.html" class="list-group-item list-group-item-action">Graphics3D - Beach</a>
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
