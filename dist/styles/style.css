@@ -3,6 +3,13 @@ html {
     scroll-behavior: smooth;
 }
 
+::selection {
+    background: rgba(255, 255, 255, 0.1);
+    color: #0F172A;
+    text-shadow: 1px 1px #0F172A;
+}
+
+
 body {
     background: #2a3b4a url(../images/scales.png);
     font-family: 'Roboto', sans-serif;
@@ -20,13 +27,43 @@ nav, #navLinks {
     transition: height 1s, opacity 1s;
 }
 
+nav a.transform, footer a.transform {
+    transition: transform 0.5s;
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.3);
+    }
+}
+
+.fa-heart {
+    animation-name: grow;
+    animation-direction: alternate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 /* ---------- HOME ---------- */
-#someUniqueElement {
+.some-reused-element {
 
 }
 
-.some-reused-element {
+/* ---------- MUSIC ---------- */
+#favMusic {
+    transition: transform 2s;
+}
 
+#favMusic:hover {
+    cursor: zoom-in;
+}
+
+#favMusic:focus {
+    transform: scale(1.5);
 }
 
 /* ---------- SOME PAGE ---------- */

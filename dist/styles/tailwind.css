@@ -595,6 +595,10 @@ video {
   border-radius: 0.25rem;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -814,6 +818,10 @@ video {
   opacity: 0;
 }
 
+.p-2 {
+  padding: 0.5rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -980,6 +988,10 @@ video {
 
 .lowercase {
   text-transform: lowercase;
+}
+
+.align-middle {
+  vertical-align: middle;
 }
 
 .visible {
