@@ -990,10 +990,6 @@ video {
   text-transform: lowercase;
 }
 
-.align-middle {
-  vertical-align: middle;
-}
-
 .visible {
   visibility: visible;
 }
