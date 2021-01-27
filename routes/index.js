@@ -50,9 +50,4 @@ router.get('/projects/:page', (req, res) => {
     }
 });
 
-/* ---------- METADATA ROUTES ---------- */
-router.get('/manifest.json', (req, res) => {
-    res.send('');
-});
-
 module.exports = router;

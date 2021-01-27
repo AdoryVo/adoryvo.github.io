@@ -1100,10 +1100,6 @@ video {
     }
   }
 
-  .sm\:inline-block {
-    display: inline-block;
-  }
-
   .sm\:my-32 {
     margin-top: 8rem;
     margin-bottom: 8rem;
@@ -1117,20 +1113,16 @@ video {
     padding: 2rem;
   }
 
-  .sm\:visible {
-    visibility: visible;
-  }
-
-  .sm\:w-14 {
-    width: 3.5rem;
-  }
-
   .sm\:w-2\/3 {
     width: 66.666667%;
   }
 }
 
 @media (min-width: 768px) {
+  .md\:inline-block {
+    display: inline-block;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -1161,6 +1153,14 @@ video {
 
   .md\:p-5 {
     padding: 1.25rem;
+  }
+
+  .md\:visible {
+    visibility: visible;
+  }
+
+  .md\:w-14 {
+    width: 3.5rem;
   }
 
   .md\:w-auto {
