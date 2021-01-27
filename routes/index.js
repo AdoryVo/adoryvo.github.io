@@ -9,7 +9,7 @@ const router = express.Router();
 
 /* ---------- FUNCTIONS  ---------- */
 
-/* ---------- REQUEST METHODS ---------- */
+/* ---------- ROUTES ---------- */
 router.get('/', (req, res) => {
     res.render('../views/index.ejs');
 });
@@ -48,6 +48,11 @@ router.get('/projects/:page', (req, res) => {
     } catch(err) {
         res.redirect('/error');
     }
+});
+
+/* ---------- METADATA ROUTES ---------- */
+router.get('/manifest.json', (req, res) => {
+    res.send('');
 });
 
 module.exports = router;
