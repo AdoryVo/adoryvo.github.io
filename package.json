@@ -9,7 +9,6 @@
   },
   "scripts": {
     "build:css": "tailwind build src/tailwind.css -o dist/styles/tailwind.css",
-    "build:html": "ejs ./views/index.ejs -o ./dist/index.html",
     "build:js": "browserify src/main.js -o dist/scripts/bundle.js",
     "build": "npm run build:css && npm run build:js && npm run build:html",
     "start": "node index.js"
