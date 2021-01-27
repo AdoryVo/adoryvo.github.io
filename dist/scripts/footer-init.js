@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function () {
     const footer = $('footer');
 
     function toggleFooterPosition() {
@@ -6,8 +6,7 @@ $(document).ready(() => {
             footer.removeClass('relative');
             footer.addClass('absolute');
             footer.addClass('bottom-0');
-        }
-        else {
+        } else {
             footer.addClass('relative');
             footer.removeClass('absolute');
             footer.removeClass('bottom-0');
@@ -16,7 +15,7 @@ $(document).ready(() => {
 
     toggleFooterPosition();
 
-    $(window).resize(() => {
+    $(window).resize(function () {
         toggleFooterPosition();
     });
 });
