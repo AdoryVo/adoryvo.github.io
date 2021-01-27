@@ -4,7 +4,7 @@ A personal website built with Node.js and stylized with Tailwind CSS.
 *Work In Progress*
 
 ## Future Release Plans
-* Projects
+* Projects tab
 
 ## Other Projects
 My Static Website Template: https://github.com/AdoryVo/website-template  
