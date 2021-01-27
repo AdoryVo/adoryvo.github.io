@@ -1,0 +1,15 @@
+{
+  "name": "Adory Vo",
+  "short_name": "Adory Vo",
+  "icons": [
+    {
+      "src": "dist/images/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/?utm_source=a2hs",
+  "theme_color": "#93c5fd",
+  "background_color": "#93c5fd",
+  "display": "standalone"
+}

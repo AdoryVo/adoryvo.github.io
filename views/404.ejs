@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('layouts/head'); %>
+
+    <title>Page Not Found — Adory Vo</title>
+</head>
+
+<body class="h-screen">
+<%- include('layouts/navbar', {active: ''}); %>
+
+<%- include('layouts/main-open', {title: 'Page Not Found'}); %>
+<p>
+    It seems like you've stumbled upon an invalid page! If you expect to find a page here, feel free to
+    email me at <a class="text-blue-400 hover:text-blue-500" href="mailto:adoryvo.business@gmail.com">adoryvo.business@gmail.com</a>
+    detailing the error so that I can fix this. Thanks!
+</p>
+<%- include('layouts/main-close'); %>
+
+<%- include('layouts/footer'); %>
+
+<!-- Bundled JS: jQuery,  -->
+<script src="scripts/bundle.js"></script>
+
+<!-- Custom Scripts -->
+<script src="scripts/navbar-init.js"></script>
+<script src="scripts/footer-init.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('layouts/head'); %>
+
+    <title>About — Adory Vo</title>
+</head>
+
+<body class="min-h-screen">
+<%- include('layouts/navbar', {active: 'about'}); %>
+
+<%- include('layouts/main-open', {title: 'About'}); %>
+<p>
+    Hey! I'm <b class="text-blue-300">Adory</b>, a sophomore
+    at <b class="text-blue-500">UC San Diego</b> passionately studying computer science to
+    pursue a career in software development. I have been doing freelance web development for about a year now and
+    this website is a web development project of mine where I'll be including some of my various work. This
+    website is created from scratch with Node.js, Express, and EJS and stylized with Tailwind CSS (see my
+    <a href="https://github.com/AdoryVo/node-website-template" class="text-blue-400 hover:text-blue-300">
+        node website template</a> for more details).
+</p>
+
+<br>
+
+<h3 class="text-secondary-300">More about me!</h3>
+<ul class="list-disc list-inside">
+    <li>I play the piano and violin</li>
+    <li>I have a younger brother and sister</li>
+    <li>I ran the 2019 San Diego Half Marathon with a time of 1:37:39 (7:27 min/mile)</li>
+    <li>I enjoy tutoring/teaching computer science and math</li>
+    <li>Favorite color: navy blue</li>
+    <li>Favorite food: pasta</li>
+    <li>Favorite television shows: Mr. Robot, Parks and Recreation, Sherlock</li>
+    <li>Favorite video game franchises: Pok&eacute;mon, Smash Bros, League of Legends</li>
+    <li><i><a class="text-blue-400 hover:text-blue-300" href="/music">Click here to judge my music taste</a></i></li>
+</ul>
+<%- include('layouts/main-close'); %>
+
+<%- include('layouts/footer'); %>
+
+<!-- Bundled JS: jQuery,  -->
+<script src="scripts/bundle.js"></script>
+
+<!-- Custom Scripts -->
+<script src="scripts/navbar-init.js"></script>
+<script src="scripts/footer-init.js"></script>
+</body>
+</html>

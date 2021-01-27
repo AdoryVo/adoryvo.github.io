@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('layouts/head'); %>
+
+    <title>About (Music) — Adory Vo</title>
+</head>
+
+<body class="h-screen">
+<%- include('layouts/navbar', {active: 'about'}); %>
+
+<%- include('layouts/main-open', {title: 'About (Music)'}); %>
+<p>
+    I enjoy listening to new music and curating various playlists in my spare time. Here are some of my favorite
+    artists and projects.
+    <br>
+    <h2 class="font-semibold text-blue-200 mt-3">My Top 100 Albums (not particularly ordered)</h2>
+    <img src="images/fav-music.png" alt="">
+    
+</p>
+<%- include('layouts/main-close'); %>
+
+<%- include('layouts/footer'); %>
+
+<!-- Bundled JS: jQuery,  -->
+<script src="scripts/bundle.js"></script>
+
+<!-- Custom Scripts -->
+<script src="scripts/navbar-init.js"></script>
+<script src="scripts/footer-init.js"></script>
+</body>
+</html>

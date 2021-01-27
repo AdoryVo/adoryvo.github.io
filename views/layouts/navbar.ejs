@@ -1,0 +1,43 @@
+<header class="bg-secondary-900 border-b-2 border-blue-200 border-opacity-25 w-full">
+    <!-- Navbar -->
+    <nav class="flex container sm:w-1/2 items-center justify-between flex-wrap pl-3 pr-0 py-1 sm:p-5">
+        <div class="flex items-center flex-shrink-0 text-blue-100 mr-6">
+            <a href="/" class="transform hover:scale-90 ">
+                <img class="w-14" src="images/favicon.ico" alt="logo">
+            </a>
+        </div>
+
+        <button class="inline-block sm:hidden hamburger hamburger--collapse" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+
+        <div id="navLinks"
+             class="invisible sm:visible h-0 sm:h-full opacity-0 sm:opacity-100 flex-grow sm:flex sm:items-center w-full sm:w-auto">
+            <div class="text-sm sm:flex-grow">
+                <a href="/about" class="<%= (locals.active === 'about') ? 'text-white' : 'text-blue-200' %>
+                    block sm:inline-block mt-4 sm:mt-0 mr-4 hover:text-white">
+                    ABOUT
+                </a>
+                <a href="/projects" class="<%= (locals.active === 'projects') ? 'text-white' : 'text-blue-200' %>
+                    block sm:inline-block mt-4 sm:mt-0 mr-4 hover:text-white">
+                    PROJECTS
+                </a>
+                <a href="/contact" class="<%= (locals.active === 'contact') ? 'text-white' : 'text-blue-200' %>
+                    block sm:inline-block mt-4 sm:mt-0 mr-4 hover:text-white">
+                    CONTACT
+                </a>
+            </div>
+            <div class="mt-4 sm:mt-0">
+                <a href="https://www.linkedin.com/in/adoryvo" class="inline-block text-blue-200 hover:text-white mr-2">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/AdoryVo" class="inline-block text-blue-200 hover:text-white mr-4">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+    </nav>
+</header>
