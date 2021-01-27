@@ -201,7 +201,9 @@ Correct the inability to style clickable types in iOS and Safari.
 */
 
 button,
-[type='button'] {
+[type='button'],
+[type='reset'],
+[type='submit'] {
   -webkit-appearance: button;
 }
 
@@ -242,6 +244,11 @@ Correct the cursor style of increment and decrement buttons in Safari.
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
+
+[type='search'] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
 
 /**
 Remove the inner padding in Chrome and Safari on macOS.
@@ -584,6 +591,10 @@ video {
   --tw-border-opacity: 0.25;
 }
 
+.rounded {
+  border-radius: 0.25rem;
+}
+
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -594,6 +605,10 @@ video {
 
 .border-4 {
   border-width: 4px;
+}
+
+.border {
+  border-width: 1px;
 }
 
 .border-t-2 {
@@ -612,6 +627,10 @@ video {
   display: inline-block;
 }
 
+.inline {
+  display: inline;
+}
+
 .flex {
   display: flex;
 }
@@ -622,6 +641,22 @@ video {
 
 .table {
   display: table;
+}
+
+.table-caption {
+  display: table-caption;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
 }
 
 .flex-wrap {
@@ -670,6 +705,10 @@ video {
 
 .h-36 {
   height: 9rem;
+}
+
+.h-40 {
+  height: 10rem;
 }
 
 .h-full {
@@ -807,6 +846,14 @@ video {
   padding-left: 0.75rem;
 }
 
+.static {
+  position: static;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -823,8 +870,21 @@ video {
   right: 0px;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.resize {
+  resize: both;
+}
+
 * {
   --tw-shadow: 0 0 #0000;
+}
+
+.shadow {
+  --tw-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-2xl {
@@ -904,8 +964,26 @@ video {
   color: rgba(59, 130, 246, var(--tw-text-opacity));
 }
 
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .not-italic {
   font-style: normal;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .invisible {

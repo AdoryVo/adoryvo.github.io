@@ -4,7 +4,8 @@ module.exports = {
     purge: {
         enabled: true,
         content: [
-            './views/**/*.ejs'
+            './views/**/*.ejs',
+            './dist/scripts/*.js'
             ]
     },
     darkMode: false, // or 'media' or 'class'
