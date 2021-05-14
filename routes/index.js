@@ -11,42 +11,39 @@ const router = express.Router();
 
 /* ---------- ROUTES ---------- */
 router.get('/', (req, res) => {
-    res.render('../views/index.ejs');
+    res.render('index');
 });
 
 router.get('/about', (req, res) => {
-    res.render('../views/about.ejs');
+    res.render('about');
 });
 
 router.get('/contact', (req, res) => {
-    res.render('../views/contact.ejs');
-});
-
-router.get('/error', (req, res) => {
-    res.render('../views/404.ejs');
+    res.render('contact');
 });
 
 router.get('/music', (req, res) => {
-    res.render('../views/music.ejs');
+    res.render('music');
 });
 
 router.get('/projects', (req, res) => {
-    res.render('../views/projects/index.ejs');
+    res.render('projects/index');
 });
 
 router.get('/projects/:page', (req, res) => {
-    const path = `../views/projects/${req.params.page}.ejs`;
-    console.log(path);
+    const path = `projects/${req.params.page}`;
 
     try {
-        if (fs.existsSync(path)) {
+        if (fs.existsSync(`views/${path}.ejs`)) {
             res.render(path);
         }
         else {
-            res.redirect('/error');
+            res.status(404);
+            res.render('404');
         }
     } catch(err) {
-        res.redirect('/error');
+        res.status(404);
+        res.render('404');
     }
 });
 
