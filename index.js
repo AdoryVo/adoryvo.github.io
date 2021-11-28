@@ -6,7 +6,6 @@ const path = require('path');
 
 /* ---------- CUSTOM MODULES ---------- */
 
-
 /* ---------- CONSTANTS ---------- */
 const app = express();
 const port = process.env.PORT || 3000;
@@ -27,20 +26,20 @@ app.use(favicon(path.join(__dirname, 'dist', 'images', 'favicon.ico'))); // go t
 
 /* ---------- ROUTES ---------- */
 app.use('/', require('./routes/index.js'));
-app.use((req, res, next) => {
-    res.status(404);
+app.use((req, res) => {
+	res.status(404);
 
-    res.format({
-        html: () => {
-            res.render('404');
-        },
-        json: function () {
-            res.json({error: 'Not found'})
-        },
-        default: function () {
-            res.type('txt').send('Not found')
-        }
-    })
+	res.format({
+		html: () => {
+			res.render('404');
+		},
+		json: function () {
+			res.json({ error: 'Not found' });
+		},
+		default: function () {
+			res.type('txt').send('Not found');
+		},
+	});
 });
 
 /* ---------- LAUNCH ---------- */

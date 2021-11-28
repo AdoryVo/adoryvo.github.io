@@ -1,0 +1,24 @@
+{
+    "In-N-Out": {
+        "Sun,Mon,Tues,Wed,Thurs": {
+            "opening": "10:30",
+            "closing": "1:00"
+        },
+        "Fri,Sat": {
+            "opening": "10:30",
+            "closing": "1:30"
+        }
+    },
+    "McDonald's": {
+        "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {
+            "opening": "0:00",
+            "closing": "0:00"
+        }
+    },
+    "Vallarta Express": {
+        "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {
+            "opening": "0:00",
+            "closing": "0:00"
+        }
+    }
+}

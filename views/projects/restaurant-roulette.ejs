@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <%- include('../layouts/head'); %>
+
+    <title>Projects — Restaurant Roulette</title>
+</head>
+
+<body class="min-h-screen">
+<%- include('../layouts/navbar', {active: 'projects'}); %>
+
+<%- include('../layouts/main-open', {title: 'Restaurant Roulette'}); %>
+<p class="text-md text-gray-200 italic mb-8">A tool to randomly select restaurants open around La Jolla!</p>
+<h2 class="text-xl font-semibold text-blue-300 mb-3">Restaurants open now</h2>
+<ul id="openRestaurants" class="list-disc list-inside mb-8">
+    
+</ul>
+<button id="rollBtn" class="bg-blue-500 hover:bg-blue-700 transition ease-in-out duration-200 py-2 px-4 rounded mb-4">
+Roll!
+</button>
+<h6 class="text-lg font-semibold">Result: <span id="result"></span></h6>
+<%- include('../layouts/main-close'); %>
+
+<%- include('../layouts/footer'); %>
+
+<!-- Bundled JS: jQuery,  -->
+<script src="/scripts/bundle.js"></script>
+
+<!-- Custom Scripts -->
+<script src="/scripts/navbar-init.js"></script>
+<script src="/scripts/footer-init.js"></script>
+<script src="/scripts/restaurant-roulette.js"></script>
+</body>
+</html>
