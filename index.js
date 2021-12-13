@@ -16,11 +16,11 @@ const port = process.env.PORT || 3000;
 
 /* ----- Express ----- */
 app.set('view engine', 'ejs');
-app.use(express.static(path.join(__dirname, 'dist'))); // url path begins at /dist
+app.use(express.static(path.join(__dirname, 'public'))); // url path begins at /public
 
 // Middleware
 app.use(compression());
-app.use(favicon(path.join(__dirname, 'dist', 'images', 'favicon.ico'))); // go to http://localhost:3000/images/favicon.ico to refresh icon
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico'))); // go to http://localhost:3000/images/favicon.ico to refresh icon
 
 // updatePackages() // For updating jQuery and Bootstrap CSS and JS files
 

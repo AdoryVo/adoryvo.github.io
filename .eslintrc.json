@@ -5,6 +5,7 @@
         "node": true
     },
     "extends": "eslint:recommended",
+    "ignorePatterns": ["bundle.js"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"

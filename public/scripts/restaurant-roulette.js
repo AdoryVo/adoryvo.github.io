@@ -1,4 +1,4 @@
-/* global $ */ // Tell ESLint to ignore undefined `bootstrap`.
+/* global $, luxon */ // Tell ESLint to ignore undefined globals.
 
 const DAY_DICT = {
 	0: 'Sun',
@@ -17,6 +17,14 @@ Number.prototype.between = function (a, b) {
 	return this >= min && this <= max;
 };
 
+function randomItem(array) {
+	return array[Math.floor(Math.random() * array.length)];
+}
+
+function parseTime(timeString) {
+	return luxon.DateTime.fromFormat(timeString, 'T').toLocaleString(luxon.DateTime.TIME_SIMPLE);
+}
+
 function checkIfOpenNow(daysHours, specificTime = ':') {
 	const specificTimeArr = specificTime.split(':').map((num) => parseInt(num));
 	const today = new Date();
@@ -30,7 +38,7 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 	const closingArr = daysHours.closing.split(':').map((num) => parseInt(num));
 	const closing = { hours: closingArr[0], minutes: closingArr[1] };
 
-	// Open 24/7 
+	// Open 24/7
 	if (daysHours.opening == daysHours.closing) {
 		return true;
 	}
@@ -58,14 +66,14 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 
 fetch('/data/restaurants.json')
 	.then((response) => response.json())
-	.then((data) => {
-		console.log(data);
+	.then((restaurants) => {
+		console.log(restaurants);
 
 		const openRestaurantsList = $('#openRestaurants');
 		let openRestaurants = [];
 
-		for (const restaurantName in data) {
-			const restaurant = data[restaurantName];
+		for (const restaurantName in restaurants) {
+			const restaurant = restaurants[restaurantName];
 			const today = DAY_DICT[new Date().getDay()];
 
 			for (const days in restaurant) {
@@ -73,7 +81,17 @@ fetch('/data/restaurants.json')
 
 				if (days.split(',').includes(today) && checkIfOpenNow(daysHours)) {
 					openRestaurants.push(restaurantName);
-					openRestaurantsList.append($(`<li>${restaurantName} (${daysHours.opening} - ${daysHours.closing})</li>`));
+					if (daysHours.opening === daysHours.closing) {
+						openRestaurantsList.append($(`<li>${restaurantName} (Open 24 hours)</li>`));
+					} else {
+						openRestaurantsList.append(
+							$(
+								`<li>${restaurantName} 
+								(${parseTime(daysHours.opening)} - ${parseTime(daysHours.closing)})
+								</li>`
+							)
+						);
+					}
 				}
 			}
 		}
@@ -81,6 +99,12 @@ fetch('/data/restaurants.json')
 		const rollBtn = $('#rollBtn');
 		const result = $('#result');
 		rollBtn.on('click', function () {
-			result.text(openRestaurants[Math.floor(Math.random()*openRestaurants.length)]);
+			let newChoice = randomItem(openRestaurants);
+
+			while (newChoice === result.text()) {
+				newChoice = randomItem(openRestaurants);
+			}
+
+			result.text(newChoice);
 		});
 	});

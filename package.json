@@ -8,9 +8,10 @@
     "url": "git+https://github.com/AdoryVo/adoryvo.github.io.git"
   },
   "scripts": {
-    "build:css": "tailwind build src/tailwind.css -o dist/styles/tailwind.css",
-    "build:js": "browserify src/main.js | uglifyjs > dist/scripts/bundle.js",
+    "build:css": "tailwind build src/tailwind.css -o public/styles/tailwind.css",
+    "build:js": "browserify src/main.js | uglifyjs > public/scripts/bundle.js",
     "build": "npm run build:css && npm run build:js",
+    "lint": "eslint --fix public src",
     "start": "node index.js"
   },
   "dependencies": {
@@ -20,7 +21,6 @@
     "compression": "^1.7.4",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "jquery": "^3.5.1",
     "postcss": "^8.2.4",
     "serve-favicon": "^2.5.0",
     "tailwindcss": "^2.0.2"
@@ -28,6 +28,8 @@
   "devDependencies": {
     "browserify": "^17.0.0",
     "eslint": "^8.3.0",
+    "jquery": "^3.6.0",
+    "luxon": "^2.2.0",
     "nodemon": "^2.0.7",
     "uglify-js": "^3.12.5"
   }
