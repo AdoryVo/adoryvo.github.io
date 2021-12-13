@@ -64,15 +64,23 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 	}
 }
 
+const footer = $('footer');
+$('details').on('click', () => {
+	footer.toggleClass('absolute bottom-0 relative');
+});
+
 fetch('/data/restaurants.json')
 	.then((response) => response.json())
 	.then((restaurants) => {
 		console.log(restaurants);
 
+		const restaurantPoolList = $('#restaurantPool');
 		const openRestaurantsList = $('#openRestaurants');
 		let openRestaurants = [];
 
 		for (const restaurantName in restaurants) {
+			restaurantPoolList.append($(`<li>${restaurantName}</li>`));
+
 			const restaurant = restaurants[restaurantName];
 			const today = DAY_DICT[new Date().getDay()];
 

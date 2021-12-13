@@ -10,7 +10,13 @@
 <%- include('../layouts/navbar', {active: 'projects'}); %>
 
 <%- include('../layouts/main-open', {title: 'Restaurant Roulette'}); %>
-<p class="text-md text-gray-200 mb-8">A tool to randomly select restaurants open around La Jolla!</p>
+<p class="text-md text-gray-200 mb-1">A tool to randomly select restaurants open around La Jolla!</p>
+<details class="text-gray-300 mb-8">
+    <summary class="italic">Current restaurant pool</summary>
+    <ol id="restaurantPool" class="list-decimal list-inside">
+
+    </ol>
+</details>
 <h2 class="text-xl font-semibold text-blue-300 mb-3">Restaurants open now</h2>
 <ul id="openRestaurants" class="list-disc list-inside mb-8">
     

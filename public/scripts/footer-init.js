@@ -1,6 +1,6 @@
 /* global $ */ // Tell ESLint to ignore undefined globals.
 
-$(document).ready(function () {
+$(function () {
 	const footer = $('footer');
 
 	function toggleFooterPosition() {
