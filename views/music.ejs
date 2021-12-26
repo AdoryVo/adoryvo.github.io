@@ -11,23 +11,24 @@
 
 <%- include('layouts/main-open', {title: 'About (Music)'}); %>
 <div>
-    I enjoy listening to new music and curating various playlists in my spare time! Here are some of my favorite
-    artists and projects.
+    I enjoy listening to new music and curating various playlists in my spare time! Here are some of my
+    favorite artists and projects.
     <br>
     <h2 class="font-semibold text-blue-200 my-3">Top 100 Albums (not particularly ordered; click picture to
         enhance)</h2>
     <img id="favMusic" tabindex="0" src="images/fav-music.png" alt="">
     <h2 class="font-semibold text-blue-200 my-3">Favorite Tracks</h2>
-    <iframe src="https://open.spotify.com/embed/playlist/5Mx2GuWlNpbpYRix5VbQxx"
-            class="rounded-lg" height="380"
-            allowtransparency="true" style="width: 100%; border:none;"
-            allow="encrypted-media"></iframe>
+    <iframe src="https://open.spotify.com/embed/playlist/5Mx2GuWlNpbpYRix5VbQxx" class="rounded-lg"
+        width="100%" height="380"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
     <h2 class="font-semibold text-blue-200 my-3">Spotify</h2>
-    <div class="bg-secondary-900 inline-block p-2 rounded-lg">
-        <iframe src="https://open.spotify.com/follow/1/?uri=spotify:user:exobyterotmg&size=detail&theme=dark&show-count=1"
-                width="300" height="56"
-                style="border:none; overflow:hidden; font-family: 'Livvic', sans-serif;"
-                allowtransparency="true"></iframe>
+    <div class="bg-secondary-900 inline-block p-3 rounded-lg">
+        <img class="inline w-14 rounded-full mr-2" src="/images/me-144x144.jpg" alt="logo">
+        <a href="https://open.spotify.com/user/exobyterotmg" target="_blank"
+            class="bg-green-500 hover:bg-green-600 rounded-full serif p-2 px-3">
+            <i class="fa-brands fa-spotify mr-2 animate-pulse"></i>
+            Follow on Spotify
+        </a>
     </div>
 </div>
 <%- include('layouts/main-close'); %>

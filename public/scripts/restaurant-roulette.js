@@ -64,9 +64,8 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 	}
 }
 
-const footer = $('footer');
 $('details').on('click', () => {
-	footer.toggleClass('absolute bottom-0 relative');
+	$(window).trigger('resize');
 });
 
 fetch('/data/restaurants.json')
@@ -103,6 +102,8 @@ fetch('/data/restaurants.json')
 				}
 			}
 		}
+
+		$(window).trigger('resize');
 
 		const rollBtn = $('#rollBtn');
 		const result = $('#result');

@@ -1,5 +1,6 @@
 /* ---------- MODULES ---------- */
 const compression = require('compression');
+const dotenv = require('dotenv');
 const express = require('express');
 const favicon = require('serve-favicon');
 const path = require('path');
@@ -8,11 +9,17 @@ const path = require('path');
 
 /* ---------- CONSTANTS ---------- */
 const app = express();
+const DOTENV_RESULT = dotenv.config();
 const port = process.env.PORT || 3000;
 
 /* ---------- FUNCTIONS ---------- */
 
 /* ---------- INITIALIZATION ---------- */
+
+/* ----- Dotenv ----- */
+if (DOTENV_RESULT.error) {
+	console.error(`${DOTENV_RESULT.error}`); // Create a .env file to stop this error.
+}
 
 /* ----- Express ----- */
 app.set('view engine', 'ejs');
@@ -26,6 +33,7 @@ app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico'))); // go
 
 /* ---------- ROUTES ---------- */
 app.use('/', require('./routes/index.js'));
+app.use('/api', require('./routes/api.js'));
 app.use((req, res) => {
 	res.status(404);
 

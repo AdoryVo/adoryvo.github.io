@@ -3,7 +3,7 @@
   "short_name": "Adory Vo",
   "icons": [
     {
-      "src": "dist/images/favicon.ico",
+      "src": "public/images/favicon.ico",
       "sizes": "256x256",
       "type": "image/x-icon"
     }
