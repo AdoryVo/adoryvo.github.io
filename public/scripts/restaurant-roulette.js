@@ -11,7 +11,7 @@ const DAY_DICT = {
 };
 
 Number.prototype.between = function (a, b) {
-	var min = Math.min(a, b),
+	const min = Math.min(a, b),
 		max = Math.max(a, b);
 
 	return this >= min && this <= max;
@@ -39,34 +39,34 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 	const closing = { hours: closingArr[0], minutes: closingArr[1] };
 
 	// Open 24/7
-	if (daysHours.opening == daysHours.closing) {
+	if (daysHours.opening === daysHours.closing) {
 		return true;
 	}
 
-	if (hours == opening.hours) {
+	if (hours === opening.hours) {
 		// Not open yet!
 		return false;
 	}
-	if (hours == closing.hours) {
+	if (hours === closing.hours) {
 		return minutes.between(0, closing.minutes);
 	}
 
 	// CASE I: Opening < Closing
 	// (ex: 8:30 < Curr < 22:30); True - [8:00, 21:30]; False - [0:00, 6:59] U [21:31, 23:00]
-	if (opening.hours < closing.hours || (opening.hours == closing.hours && opening.minutes < closing.minutes)) {
+	if (opening.hours < closing.hours || (opening.hours === closing.hours && opening.minutes < closing.minutes)) {
 		return hours.between(opening.hours, closing.hours);
 	}
 
 	// CASE II: Closing < Opening
 	// (ex: 1:30 < Curr < 10:30); True - [10:00, 23:00] U [0:00, 0:30]; False - [0:31, 9:59]
-	if (closing.hours < opening.hours || (opening.hours == closing.hours && closing.minutes < opening.minutes)) {
+	if (closing.hours < opening.hours || (opening.hours === closing.hours && closing.minutes < opening.minutes)) {
 		return !hours.between(opening.hours, closing.hours);
 	}
 }
 
-$('details').on('click', () => {
+$('details').on('toggle', () => {
 	$(window).trigger('resize');
-});
+})
 
 fetch('/data/restaurants.json')
 	.then((response) => response.json())
