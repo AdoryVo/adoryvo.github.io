@@ -14,7 +14,6 @@
         "arrow-parens": ["error", "always"],
         "brace-style": ["error", "1tbs"],
         "indent": ["error", "tab"],
-        "linebreak-style": ["error", "unix"],
         "no-prototype-builtins": "off",
         "quotes": ["error", "single"],
         "semi": ["error", "always"]

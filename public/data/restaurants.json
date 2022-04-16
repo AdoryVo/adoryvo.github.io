@@ -2,11 +2,11 @@
     "Calvin's Korean Hot Chicken": {
         "Sun,Tues,Wed,Thurs": {
             "opening": "11:00",
-            "closing": "8:00"
+            "closing": "20:00"
         },
         "Fri,Sat": {
             "opening": "11:00",
-            "closing": "9:00"
+            "closing": "21:00"
         }
     },
     "Cane's": {
@@ -59,9 +59,6 @@
             "closing": "22:00"
         }
     },
-    "Five Guys": {
-
-    },
     "In-N-Out": {
         "Sun,Mon,Tues,Wed,Thurs": {
             "opening": "10:30",
@@ -98,6 +95,12 @@
             "closing": "21:00"
         }
     },
+    "L&L Hawaiian Barbecue": {
+        "Mon,Tues,Wed,Thurs,Fri,Sat": {
+            "opening": "10:00",
+            "closing": "21:00"
+        }
+    },
     "Manna BBQ (Convoy)": {
         "Sun": {
             "opening": "12:00",
@@ -128,6 +131,12 @@
             "closing": "0:00"
         }
     },
+    "Micheline's Pita House": {
+        "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {
+            "opening": "11:00",
+            "closing": "21:00"
+        }
+    },
     "Pho Cow Cali": {
         "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {
             "opening": "8:00",
@@ -150,8 +159,17 @@
             "closing": "22:00"
         }
     },
-    "Song Hak": {
-
+    "Rubicon Deli": {
+        "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {
+            "opening": "10:00",
+            "closing": "19:30"
+        }
+    },
+    "Szechuan Chef": {
+        "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {
+            "opening": "11:00",
+            "closing": "21:00"
+        }
     },
     "Vallarta Express": {
         "Sun,Mon,Tues,Wed,Thurs,Fri,Sat": {

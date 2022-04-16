@@ -66,7 +66,7 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 
 $('details').on('toggle', () => {
 	$(window).trigger('resize');
-})
+});
 
 fetch('/data/restaurants.json')
 	.then((response) => response.json())
@@ -88,12 +88,14 @@ fetch('/data/restaurants.json')
 
 				if (days.split(',').includes(today) && checkIfOpenNow(daysHours)) {
 					openRestaurants.push(restaurantName);
+					const restaurantNameStyled = `<b>${restaurantName}</b> &emsp;`;
+
 					if (daysHours.opening === daysHours.closing) {
-						openRestaurantsList.append($(`<li>${restaurantName} (Open 24 hours)</li>`));
+						openRestaurantsList.append($(`<li>${restaurantNameStyled} (Open 24 hours)</li>`));
 					} else {
 						openRestaurantsList.append(
 							$(
-								`<li>${restaurantName} 
+								`<li>${restaurantNameStyled} 
 								(${parseTime(daysHours.opening)} - ${parseTime(daysHours.closing)})
 								</li>`
 							)
@@ -108,12 +110,19 @@ fetch('/data/restaurants.json')
 		const rollBtn = $('#rollBtn');
 		const result = $('#result');
 		rollBtn.on('click', function () {
-			let newChoice = randomItem(openRestaurants);
+			const previousChoice = result.text();
+			const ROLL_ITERATIONS = 10;
 
-			while (newChoice === result.text()) {
-				newChoice = randomItem(openRestaurants);
+			// Flash a bunch of options
+			for (let iteration = 0; iteration < ROLL_ITERATIONS; iteration++) {
+				setTimeout(() => result.text(randomItem(openRestaurants)), iteration*50);
 			}
 
-			result.text(newChoice);
+			// Ensure a different choice than before is generated
+			setTimeout(() => {
+				while (previousChoice === result.text()) {
+					result.text(randomItem(openRestaurants));
+				}
+			}, ROLL_ITERATIONS*50 + 100);
 		});
 	});
