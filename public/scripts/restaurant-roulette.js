@@ -25,11 +25,15 @@ function parseTime(timeString) {
 	return luxon.DateTime.fromFormat(timeString, 'T').toLocaleString(luxon.DateTime.TIME_SIMPLE);
 }
 
-function checkIfOpenNow(daysHours, specificTime = ':') {
-	const specificTimeArr = specificTime.split(':').map((num) => parseInt(num));
+function checkIfOpenNow(daysHours, options = {specificTime: ':', excludeClosingSoon: false}) {
+	if (!options.specificTime) options.specificTime = ':';
+	const specificTimeArr = options.specificTime.split(':').map((num) => parseInt(num));
 	const today = new Date();
 	let hours = specificTimeArr[0] || today.getHours();
-	hours = (hours + 1) % 24;
+	// Exclude restaurants closing soon from "open" restaurants
+	if (options.excludeClosingSoon) {
+		hours = (hours + 1) % 24;
+	}
 	const minutes = specificTimeArr[1] || today.getMinutes();
 
 	const openingArr = daysHours.opening.split(':').map((num) => parseInt(num));
@@ -52,16 +56,20 @@ function checkIfOpenNow(daysHours, specificTime = ':') {
 	}
 
 	// CASE I: Opening < Closing
-	// (ex: 8:30 < Curr < 22:30); True - [8:00, 21:30]; False - [0:00, 6:59] U [21:31, 23:00]
+	// (ex: 8:30 < Curr < 22:30); True - [8:00, 21:30]; False - [0:00, 7:59] U [21:31, 23:59]
 	if (opening.hours < closing.hours || (opening.hours === closing.hours && opening.minutes < closing.minutes)) {
 		return hours.between(opening.hours, closing.hours);
 	}
 
 	// CASE II: Closing < Opening
-	// (ex: 1:30 < Curr < 10:30); True - [10:00, 23:00] U [0:00, 0:30]; False - [0:31, 9:59]
+	// (ex: 1:30 < Curr < 10:30); True - [10:00, 23:59] U [0:00, 0:30]; False - [0:31, 9:59]
 	if (closing.hours < opening.hours || (opening.hours === closing.hours && closing.minutes < opening.minutes)) {
 		return !hours.between(opening.hours, closing.hours);
 	}
+}
+
+function isClosingSoon(daysHours) {
+	return checkIfOpenNow(daysHours) && !checkIfOpenNow(daysHours, {excludeClosingSoon: true});
 }
 
 $('details').on('toggle', () => {
@@ -71,7 +79,7 @@ $('details').on('toggle', () => {
 fetch('/data/restaurants.json')
 	.then((response) => response.json())
 	.then((restaurants) => {
-		console.log(restaurants);
+		console.log({'restaurants.json': restaurants});
 
 		const restaurantPoolList = $('#restaurantPool');
 		const openRestaurantsList = $('#openRestaurants');
@@ -93,10 +101,11 @@ fetch('/data/restaurants.json')
 					if (daysHours.opening === daysHours.closing) {
 						openRestaurantsList.append($(`<li>${restaurantNameStyled} (Open 24 hours)</li>`));
 					} else {
+						const closingWarning = isClosingSoon(daysHours) ? '&emsp; <i class="text-red-200">❗ Closing Soon ❗</i>' : '';
 						openRestaurantsList.append(
 							$(
 								`<li>${restaurantNameStyled} 
-								(${parseTime(daysHours.opening)} - ${parseTime(daysHours.closing)})
+								(${parseTime(daysHours.opening)} - ${parseTime(daysHours.closing)}) ${closingWarning}
 								</li>`
 							)
 						);
@@ -112,10 +121,11 @@ fetch('/data/restaurants.json')
 		rollBtn.on('click', function () {
 			const previousChoice = result.text();
 			const ROLL_ITERATIONS = 10;
+			const TIME_BETWEEN_ROLLS = 50;
 
 			// Flash a bunch of options
 			for (let iteration = 0; iteration < ROLL_ITERATIONS; iteration++) {
-				setTimeout(() => result.text(randomItem(openRestaurants)), iteration*50);
+				setTimeout(() => result.text(randomItem(openRestaurants)), iteration*TIME_BETWEEN_ROLLS);
 			}
 
 			// Ensure a different choice than before is generated
@@ -123,6 +133,6 @@ fetch('/data/restaurants.json')
 				while (previousChoice === result.text()) {
 					result.text(randomItem(openRestaurants));
 				}
-			}, ROLL_ITERATIONS*50 + 100);
+			}, ROLL_ITERATIONS*TIME_BETWEEN_ROLLS + 100);
 		});
 	});
